@@ -1,0 +1,137 @@
+{
+  "preview": true,
+  "default_language": "en",
+  "verified_on": "2026-10-07",
+  "email": "hjkentech@outlook.kr",
+  "email_status": "User-supplied contact address; confirmation required before public release",
+  "profile_url": "https://kentech.ac.kr/hjkim/template/main.do",
+  "publications_url": "https://kentech.ac.kr/submenu.do?menuurl=EmPii7OvsAgMn8WvyAXCLg%3D%3D&siteName=hjkim",
+  "institution_url": "https://www.kentech.ac.kr/",
+  "sources": [
+    "https://kentech.ac.kr/hjkim/template/main.do",
+    "https://admission.kentech.ac.kr/ourFaculty.do",
+    "https://kentech.ac.kr/submenu.do?menuurl=JPQbgLY0JlNRZPvKXFeixQ%3D%3D&siteName=hjkim",
+    "https://kentech.ac.kr/submenu.do?menuurl=EmPii7OvsAgMn8WvyAXCLg%3D%3D&siteName=hjkim"
+  ],
+  "brand": {"en": "DeepMathLab", "ko": "DeepMathLab"},
+  "brand_sub": {"en": "HYUNJU KIM · KENTECH", "ko": "김현주 교수 연구실 · KENTECH"},
+  "brand_source": "Working website label based on the lab GitHub account DeepMathLab supplied by the user; official spelling pending review",
+  "nav": {
+    "research": {"en": "Research", "ko": "연구 소개"},
+    "people": {"en": "People", "ko": "교수 · 구성원"},
+    "publications": {"en": "Publications", "ko": "논문"},
+    "contact": {"en": "Contact", "ko": "연락처"}
+  },
+  "copy": {
+    "preview": {"en": "WEBSITE CONCEPT", "ko": "홈페이지 시안"},
+    "hero_title": {"en": "Computational<br><span>Mathematics.</span>", "ko": "계산수학과<br><span>과학계산.</span>"},
+    "hero_subtitle": {"en": "Scientific Computing & Numerical Analysis", "ko": "Scientific Computing & Numerical Analysis"},
+    "hero_intro": {"en": "We study numerical methods and mathematical models for differential equations and computational solid mechanics.", "ko": "미분방정식과 고체역학 문제를 다루는 수학적 모델, 수치해석 방법을 연구합니다."},
+    "hero_cta": {"en": "Explore our research", "ko": "연구 분야 살펴보기"},
+    "hero_secondary": {"en": "Meet the group", "ko": "연구실 소개"},
+    "figure_caption": {"en": "Parametric surface · conceptual illustration", "ko": "매개변수 곡면 · 개념도"},
+    "hero_strip": {"en": "Applied mathematics / Numerical analysis / Computational solid mechanics", "ko": "응용수학 / 수치해석 / 전산고체역학"},
+    "research_heading": {"en": "Research directions", "ko": "연구 분야"},
+    "research_intro": {"en": "Three connected directions, grounded in applied mathematics and scientific computing.", "ko": "응용수학과 과학계산을 바탕으로 서로 연결된 세 가지 연구 방향을 탐구합니다."},
+    "people_heading": {"en": "People behind the research", "ko": "연구를 만드는 사람들"},
+    "pi_label": {"en": "PRINCIPAL INVESTIGATOR", "ko": "연구책임자"},
+    "pi_name": {"en": "Hyunju Kim", "ko": "김현주"},
+    "pi_role": {"en": "Associate Professor", "ko": "부교수"},
+    "pi_department": {"en": "Department of Energy Engineering\nKorea Institute of Energy Technology", "ko": "한국에너지공과대학교\n에너지공학부"},
+    "pi_description": {"en": "Research interests span numerical methods and analysis, computational solid mechanics, and fractional differential equations.", "ko": "수치해석 방법과 분석, 전산고체역학, 분수차 미분방정식을 연구합니다."},
+    "profile_link": {"en": "KENTECH faculty profile", "ko": "KENTECH 공식 교수 페이지"},
+    "members_label": {"en": "GROUP MEMBERS", "ko": "구성원"},
+    "all_filter": {"en": "All", "ko": "전체"},
+    "undergraduate_filter": {"en": "Undergraduate", "ko": "학부연구생"},
+    "members_note": {"en": "Initial confirmed member list; the complete group roster is being prepared.", "ko": "현재 확인된 초기 명단입니다. 전체 구성원 명단은 자료 확인 후 추가합니다."},
+    "publications_heading": {"en": "Selected publications", "ko": "주요 논문"},
+    "publications_intro": {"en": "Selected published work from the faculty’s official list. Follow the DOI links for the original papers.", "ko": "공식 교수 페이지의 게재 완료 논문 중 일부를 수록했습니다. DOI 링크에서 원문 정보를 확인할 수 있습니다."},
+    "publications_source": {"en": "Official publication list", "ko": "공식 논문 목록 보기"},
+    "search_placeholder": {"en": "Search titles, authors, or journals", "ko": "제목 · 저자 · 학술지 검색"},
+    "search_label": {"en": "Search publications", "ko": "논문 검색"},
+    "filter_all_years": {"en": "All years", "ko": "전체 연도"},
+    "filter_year_label": {"en": "Publication year", "ko": "게재 연도"},
+    "no_results": {"en": "No matching publications. Try another term or year.", "ko": "검색 결과가 없습니다. 검색어나 연도를 변경해주세요."},
+    "contact_heading": {"en": "Connect with the group", "ko": "연구실에 문의하기"},
+    "contact_intro": {"en": "For research and collaboration enquiries, get in touch with the group.", "ko": "연구와 협업에 관한 문의는 연구실 이메일로 연락해주세요."},
+    "email_label": {"en": "LAB EMAIL", "ko": "연구실 이메일"},
+    "location_label": {"en": "LOCATION", "ko": "소재지"},
+    "location": {"en": "KENTECH\nNaju, Jeollanam-do\nRepublic of Korea", "ko": "한국에너지공과대학교\n전라남도 나주시\n대한민국"},
+    "institution_link": {"en": "Visit KENTECH", "ko": "KENTECH 홈페이지"},
+    "back_top": {"en": "Back to top", "ko": "맨 위로"},
+    "footer_note": {"en": "Review draft · Lab name, complete roster, and contact details require confirmation.", "ko": "검토용 시안 · 공식 연구실명, 전체 구성원 및 연락처 확인이 필요합니다."},
+    "skip": {"en": "Skip to main content", "ko": "본문 바로가기"},
+    "menu": {"en": "Open navigation", "ko": "메뉴 열기"}
+  },
+  "research": [
+    {
+      "id": "mechanics",
+      "number": "01",
+      "title": {"en": "Computational solid mechanics", "ko": "전산고체역학"},
+      "subtitle": {"en": "Mathematical models of deformation and singularities", "ko": "변형과 특이점을 다루는 수학적 모델"},
+      "description": {"en": "Numerical approaches to solid mechanics problems, including plate models, cracks, and singularities. We investigate how mathematical structure informs computational methods.", "ko": "판 모델, 균열, 특이점 등을 포함하는 고체역학 문제를 수치적으로 다룹니다. 문제의 수학적 구조를 분석하고 이를 계산 방법과 연결합니다."},
+      "tags": ["Solid mechanics", "Singularities", "Generalized FEM"]
+    },
+    {
+      "id": "geometry",
+      "number": "02",
+      "title": {"en": "Isogeometric analysis", "ko": "등기하해석"},
+      "subtitle": {"en": "Connecting geometry and numerical approximation", "ko": "기하 표현과 수치 근사의 연결"},
+      "description": {"en": "Isogeometric analysis connects geometric representations with numerical approximation. Related interests include generalized finite element, collocation, and meshless methods.", "ko": "등기하해석을 통해 기하 표현과 수치 근사를 연결합니다. 일반화 유한요소법, 콜로케이션 및 무요소 방법도 관련 연구 분야에 포함됩니다."},
+      "tags": ["Isogeometric analysis", "Collocation", "Meshless methods"]
+    },
+    {
+      "id": "fractional",
+      "number": "03",
+      "title": {"en": "Fractional differential equations", "ko": "분수차 미분방정식"},
+      "subtitle": {"en": "Efficient methods for fractional-order models", "ko": "분수차 모델을 위한 효율적인 계산 방법"},
+      "description": {"en": "Efficient numerical algorithms for fractional differential equations and dynamical systems, including time-fractional partial differential equations and nonlinear problems.", "ko": "분수차 미분방정식과 동역학계를 위한 효율적인 수치 알고리즘을 연구합니다. 시간 분수차 편미분방정식과 비선형 문제를 포함합니다."},
+      "tags": ["Fractional equations", "Dynamical systems", "Numerical algorithms"]
+    }
+  ],
+  "members": [
+    {
+      "initials": "DK",
+      "name": {"en": "Donghyeok Kim", "ko": "김동혁"},
+      "name_secondary": {"en": "김동혁", "ko": "Donghyeok Kim"},
+      "role": {"en": "Undergraduate Researcher", "ko": "학부연구생"},
+      "detail": {"en": "KENTECH · Senior", "ko": "한국에너지공과대학교 · 4학년"},
+      "category": "undergraduate",
+      "source": "User-provided AGENTS.md instructions, 2026-10-07"
+    }
+  ],
+  "publications": [
+    {
+      "year": 2021,
+      "title": "An efficient numerical approach for solving two-point fractional order nonlinear boundary value problems with Robin boundary conditions",
+      "authors": "Hyunju Kim, Junseo Lee, Bongsoo Jang",
+      "journal": "Advances in Difference Equations",
+      "detail": "2021 · Article 193",
+      "doi": "10.1186/s13662-021-03355-3"
+    },
+    {
+      "year": 2021,
+      "title": "A fast and high-order numerical method for nonlinear fractional-order differential equations with non-singular kernel",
+      "authors": "Seyeon Lee, Junseo Lee, Hyunju Kim, Bongsoo Jang",
+      "journal": "Applied Numerical Mathematics",
+      "detail": "163 · 57–76",
+      "doi": "10.1016/j.apnum.2021.01.013"
+    },
+    {
+      "year": 2020,
+      "title": "Shifted Jacobi spectral-Galerkin method for solving fractional order initial value problems",
+      "authors": "Hyunju Kim, Keon Ho Kim, Bongsoo Jang",
+      "journal": "Journal of Computational and Applied Mathematics",
+      "detail": "380 · Article 112988",
+      "doi": "10.1016/j.cam.2020.112988"
+    },
+    {
+      "year": 2020,
+      "title": "New explicit and accelerated techniques for solving fractional order differential equations",
+      "authors": "Hyunju Kim, Keon Ho Kim, Seyeon Lee, Bongsoo Jang",
+      "journal": "Applied Mathematics and Computation",
+      "detail": "379 · Article 125228",
+      "doi": "10.1016/j.amc.2020.125228"
+    }
+  ]
+}

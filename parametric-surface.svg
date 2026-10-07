@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="560" viewBox="0 0 700 560" fill="none" role="img" aria-labelledby="surface-description">
+  <desc id="surface-description">Schematic of a smooth tensor-product spline surface, its curved quadrilateral parameter grid, and selected control points. This is an illustrative diagram, not a simulation result.</desc>
+  <defs>
+    <linearGradient id="surface-wash" x1="130" y1="110" x2="535" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5facff" stop-opacity="0.06"/>
+      <stop offset="0.55" stop-color="#5facff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#92a9cf" stop-opacity="0.025"/>
+    </linearGradient>
+    <linearGradient id="grid-tone" x1="100" y1="170" x2="600" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#92a9cf"/>
+      <stop offset="0.5" stop-color="#5facff"/>
+      <stop offset="1" stop-color="#92a9cf"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#92a9cf" stroke-width="1.05" stroke-dasharray="3 6" stroke-linecap="round" opacity="0.17">
+    <polyline points="65.00,380.20 134.44,238.42 203.88,133.29 273.32,83.14"/>
+    <polyline points="185.56,436.86 255.00,253.85 324.44,180.79 393.88,194.78"/>
+    <polyline points="306.12,420.22 375.56,347.16 445.00,329.08 514.44,297.25"/>
+    <polyline points="426.68,339.45 496.12,321.36 565.56,344.51 635.00,317.27"/>
+    <polyline points="65.00,380.20 185.56,436.86 306.12,420.22 426.68,339.45"/>
+    <polyline points="134.44,238.42 255.00,253.85 375.56,347.16 496.12,321.36"/>
+    <polyline points="203.88,133.29 324.44,180.79 445.00,329.08 565.56,344.51"/>
+    <polyline points="273.32,83.14 393.88,194.78 514.44,297.25 635.00,317.27"/>
+  </g>
+  <path d="M 65.00,380.20 C 185.56,436.86 306.12,420.22 426.68,339.45 C 496.12,321.36 565.56,344.51 635.00,317.27 C 514.44,297.25 393.88,194.78 273.32,83.14 C 203.88,133.29 134.44,238.42 65.00,380.20 Z" fill="url(#surface-wash)"/>
+  <g stroke="url(#grid-tone)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 78.02,354.05 C 198.58,403.83 319.14,407.15 439.70,336.52" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 91.04,328.78 C 211.60,373.34 332.16,395.27 452.72,334.42" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 104.06,304.43 C 224.62,345.36 345.18,384.47 465.74,333.02" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 117.08,281.02 C 237.64,319.86 358.20,374.66 478.76,332.18" stroke-width="1.35" opacity="0.74"/>
+    <path d="M 130.10,258.58 C 250.66,296.80 371.22,365.74 491.78,331.78" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 143.12,237.13 C 263.68,276.15 384.24,357.60 504.80,331.67" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 156.14,216.69 C 276.70,257.88 397.26,350.15 517.82,331.72" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 169.16,197.31 C 289.72,241.95 410.28,343.28 530.84,331.79" stroke-width="1.35" opacity="0.74"/>
+    <path d="M 182.18,179.00 C 302.74,228.32 423.30,336.89 543.86,331.76" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 195.20,161.79 C 315.76,216.97 436.32,330.88 556.88,331.49" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 208.22,145.71 C 328.78,207.87 449.34,325.16 569.90,330.84" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 221.24,130.78 C 341.80,200.97 462.36,319.62 582.92,329.68" stroke-width="1.35" opacity="0.74"/>
+    <path d="M 234.26,117.03 C 354.82,196.24 475.38,314.16 595.94,327.88" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 247.28,104.49 C 367.84,193.66 488.40,308.68 608.96,325.30" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 260.30,93.18 C 380.86,193.18 501.42,303.08 621.98,321.81" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 87.60,389.96 C 157.05,242.18 226.49,143.32 295.93,103.95" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 110.21,398.03 C 179.65,247.47 249.09,155.37 318.53,124.43" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 132.81,404.40 C 202.26,254.02 271.70,169.10 341.14,144.49" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 155.42,409.09 C 224.86,261.52 294.30,184.17 363.74,164.01" stroke-width="1.35" opacity="0.74"/>
+    <path d="M 178.02,412.12 C 247.47,269.69 316.91,200.22 386.35,182.88" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 200.63,413.50 C 270.07,278.25 339.51,216.93 408.95,201.00" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 223.23,413.24 C 292.67,286.90 362.12,233.95 431.56,218.27" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 245.84,411.36 C 315.28,295.35 384.72,250.93 454.16,234.56" stroke-width="1.35" opacity="0.74"/>
+    <path d="M 268.44,407.87 C 337.88,303.33 407.33,267.53 476.77,249.79" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 291.05,402.78 C 360.49,310.53 429.93,283.42 499.37,263.83" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 313.65,396.10 C 383.09,316.67 452.53,298.25 521.98,276.58" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 336.26,387.86 C 405.70,321.46 475.14,311.68 544.58,287.94" stroke-width="1.35" opacity="0.74"/>
+    <path d="M 358.86,378.06 C 428.30,324.61 497.74,323.36 567.19,297.79" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 381.47,366.71 C 450.91,325.84 520.35,332.95 589.79,306.04" stroke-width="0.85" opacity="0.4"/>
+    <path d="M 404.07,353.84 C 473.51,324.85 542.95,340.12 612.40,312.56" stroke-width="0.85" opacity="0.4"/>
+  </g>
+  <path d="M 65.00,380.20 C 185.56,436.86 306.12,420.22 426.68,339.45 C 496.12,321.36 565.56,344.51 635.00,317.27 C 514.44,297.25 393.88,194.78 273.32,83.14 C 203.88,133.29 134.44,238.42 65.00,380.20 Z" stroke="#92a9cf" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <g>
+    <circle cx="65.00" cy="380.20" r="5.25" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="65.00" cy="380.20" r="2.65" fill="#92a9cf" fill-opacity="0.55"/>
+    <circle cx="134.44" cy="238.42" r="5.25" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="134.44" cy="238.42" r="2.65" fill="#92a9cf" fill-opacity="0.55"/>
+    <circle cx="203.88" cy="133.29" r="6.30" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="203.88" cy="133.29" r="3.70" fill="#5facff" fill-opacity="0.94"/>
+    <circle cx="273.32" cy="83.14" r="5.25" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="273.32" cy="83.14" r="2.65" fill="#92a9cf" fill-opacity="0.55"/>
+    <circle cx="255.00" cy="253.85" r="6.30" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="255.00" cy="253.85" r="3.70" fill="#5facff" fill-opacity="0.94"/>
+    <circle cx="324.44" cy="180.79" r="5.25" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="324.44" cy="180.79" r="2.65" fill="#92a9cf" fill-opacity="0.55"/>
+    <circle cx="445.00" cy="329.08" r="5.25" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="445.00" cy="329.08" r="2.65" fill="#92a9cf" fill-opacity="0.55"/>
+    <circle cx="426.68" cy="339.45" r="6.30" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="426.68" cy="339.45" r="3.70" fill="#5facff" fill-opacity="0.94"/>
+    <circle cx="565.56" cy="344.51" r="5.25" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="565.56" cy="344.51" r="2.65" fill="#92a9cf" fill-opacity="0.55"/>
+    <circle cx="635.00" cy="317.27" r="6.30" fill="#101b31" fill-opacity="0.9"/>
+    <circle cx="635.00" cy="317.27" r="3.70" fill="#5facff" fill-opacity="0.94"/>
+  </g>
+</svg>
