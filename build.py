@@ -16,7 +16,7 @@ def esc(value):
     return html.escape(str(value), quote=True)
 
 
-def render(lang):
+def render(lang, page_path=None):
     def t(value):
         raw = value.get(lang, value.get("en", "")) if isinstance(value, dict) else value
         return (esc(raw).replace("\n", "<br>\n").replace("&lt;br&gt;", "<br>\n")
@@ -50,7 +50,7 @@ def render(lang):
     alternate = "ko.html" if lang == "en" else "index.html"
     alternate_label = "한국어" if lang == "en" else "EN"
     title = "DeepMathLab | Computational Mathematics | KENTECH" if lang == "en" else "DeepMathLab | 김현주 교수 연구실 | KENTECH"
-    canonical = PUBLIC_ORIGIN + ("ko.html" if lang == "ko" else "")
+    canonical = PUBLIC_ORIGIN + (page_path if page_path is not None else ("ko.html" if lang == "ko" else ""))
     description = esc(DATA["copy"]["hero_intro"][lang])
     share_title = "DeepMathLab | KENTECH"
     share_alt = "DeepMathLab — Computational Mathematics and Scientific Computing at KENTECH"
@@ -138,6 +138,8 @@ def render(lang):
 </html>'''
 
 
-for language, filename in [("en", "index.html"), ("ko", "ko.html")]:
-    (OUT / filename).write_text(render(language), encoding="utf-8")
-print("Built index.html and ko.html")
+for language, filename in [("en", "index.html"), ("ko", "ko.html"), ("en", "home.html")]:
+    # A distinct, non-redirecting URL gives link crawlers a fresh preview entry.
+    page_path = "home.html" if filename == "home.html" else None
+    (OUT / filename).write_text(render(language, page_path), encoding="utf-8")
+print("Built index.html, ko.html and home.html")
