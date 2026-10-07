@@ -9,7 +9,14 @@ DATA = json.loads((ROOT / "site.json").read_text(encoding="utf-8"))
 OUT = ROOT
 OUT.mkdir(exist_ok=True)
 PUBLIC_ORIGIN = "https://deepmathlab.github.io/"
-SHARE_IMAGE = PUBLIC_ORIGIN + "share-card.png?v=20261007"
+ASSET_VERSION = "20261007-atlas2"
+SHARE_IMAGE = PUBLIC_ORIGIN + "share-card.png?v=" + ASSET_VERSION
+
+RESEARCH_SYMBOLS = {
+    "geometry": '<path d="M8 39 24 9l28 10-14 28Z M8 39l44-20M24 9l14 38M14 28l29-4M18 19l28 11M18 42l13-31M28 45l12-30"/><circle cx="24" cy="9" r="2"/><circle cx="38" cy="47" r="2"/>',
+    "fractional": '<path d="M8 46h46M12 48V10M12 42C16 21 19 15 23 29s7 13 11 2 7-6 10-3 5 2 9-1"/><path d="M12 42c8-5 13-9 20-12s13-5 21-6" stroke-dasharray="3 4"/>',
+    "mechanics": '<path d="m10 40 30 9 14-23-30-9Z M10 40l14-23M20 43l14-23M30 46l14-23M15 32l30 9M20 25l30 9"/><path d="M28 8v11m-4-4 4 4 4-4M41 10v13m-4-4 4 4 4-4"/>'
+}
 
 
 def esc(value):
@@ -27,12 +34,11 @@ def render(lang, page_path=None):
         return t(DATA["copy"][key])
 
     research = "".join(f'''
-        <details class="research-item" {'open' if i == 0 else ''}>
-          <summary><span class="item-number">{esc(item['number'])}</span>
-            <span class="research-titles"><span class="research-title">{t(item['title'])}</span><span class="research-subtitle">{t(item['subtitle'])}</span></span>
-            <span class="expand-icon" aria-hidden="true">+</span></summary>
+        <article class="research-item" id="research-{esc(item['id'])}">
+          <div class="research-card-top"><svg class="research-symbol" viewBox="0 0 64 56" aria-hidden="true">{RESEARCH_SYMBOLS[item['id']]}</svg><span class="item-number">{esc(item['number'])}</span></div>
+          <div class="research-titles"><h3 class="research-title">{t(item['title'])}</h3><p class="research-subtitle">{t(item['subtitle'])}</p></div>
           <div class="research-detail"><p>{t(item['description'])}</p><div class="tags">{''.join(f'<span>{esc(tag)}</span>' for tag in item['tags'])}</div></div>
-        </details>''' for i, item in enumerate(DATA["research"]))
+        </article>''' for item in DATA["research"])
     members = "".join(f'''
         <article class="member"><div class="member-avatar" aria-hidden="true">{esc(member['initials'])}</div>
           <div class="member-name"><h4>{t(member['name'])}</h4><span>{t(member['name_secondary'])}</span></div>
@@ -40,9 +46,9 @@ def render(lang, page_path=None):
         </article>''' for member in DATA["members"])
     publications = "".join(f'''
         <article class="publication" data-year="{item['year']}" data-search="{esc(' '.join([item['title'], item['authors'], item['journal'], item['doi']]).lower())}">
-          <span class="pub-year">{item['year']}</span><div class="pub-body">
+          <span class="pub-year">{item['year']}</span><div class="pub-body"><span class="pub-type">{t(item['topic'])}</span>
             <h3><a href="https://doi.org/{esc(item['doi'])}" target="_blank" rel="noopener noreferrer">{esc(item['title'])}<span class="pub-arrow" aria-hidden="true">↗</span></a></h3>
-            <p class="pub-authors">{esc(item['authors'])}</p><p class="pub-journal"><span>{esc(item['journal'])}</span> · {esc(item['detail'])}</p>
+            <p class="pub-authors">{esc(item['authors'])}</p><p class="pub-journal"><span>{esc(item['journal'])}</span> · {esc(item['detail'])}</p><a class="pub-doi" href="https://doi.org/{esc(item['doi'])}" target="_blank" rel="noopener noreferrer">DOI: {esc(item['doi'])}<span aria-hidden="true">↗</span></a>
           </div></article>''' for item in DATA["publications"])
     years = sorted({p["year"] for p in DATA["publications"]}, reverse=True)
     options = "".join(f'<option value="{year}">{year}</option>' for year in years)
@@ -54,14 +60,13 @@ def render(lang, page_path=None):
     description = esc(DATA["copy"]["hero_intro"][lang])
     share_title = "DeepMathLab | KENTECH"
     share_alt = "DeepMathLab — Computational Mathematics and Scientific Computing at KENTECH"
-    preview = f'<span class="preview-label"><span></span>{c("preview")}</span>' if DATA["preview"] else ""
     preview_footer = f'<p class="footer-note">{c("footer_note")}</p>' if DATA["preview"] else ""
     return f'''<!doctype html>
 <html lang="{lang}">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{esc(DATA['copy']['hero_intro'][lang])}">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#f7f8f5">
   <meta name="robots" content="{'noindex,nofollow' if DATA['preview'] else 'index,follow'}">
   <title>{title}</title>
   <link rel="canonical" href="{canonical}">
@@ -83,8 +88,8 @@ def render(lang, page_path=None):
   <meta name="twitter:image" content="{SHARE_IMAGE}">
   <meta name="twitter:image:alt" content="{share_alt}">
   <link rel="image_src" href="{SHARE_IMAGE}">
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="./favicon.svg?v={ASSET_VERSION}" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v={ASSET_VERSION}">
   <link rel="alternate" hreflang="en" href="./index.html">
   <link rel="alternate" hreflang="ko" href="./ko.html">
   <script src="./app.js" defer></script>
@@ -93,7 +98,7 @@ def render(lang, page_path=None):
   <a class="skip-link" href="#main">{c('skip')}</a>
   <header class="site-header"><div class="container header-inner">
     <a class="wordmark" href="{'index.html' if lang == 'en' else 'ko.html'}" aria-label="{title}">
-      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" fill="#315deb"/><path d="M11 29V11h7a8 8 0 0 1 0 18h-7m12-18v18m-7-18v18" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="6" fill="#1d6258"/><path d="M11 29V11h7a8 8 0 0 1 0 18h-7m12-18v18m-7-18v18" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg>
       <span><strong>{t(DATA['brand'])}</strong><small>{t(DATA['brand_sub'])}</small></span>
     </a>
     <div class="header-actions"><nav id="navigation" aria-label="{'Primary navigation' if lang == 'en' else '주 메뉴'}">{navigation}</nav>
@@ -103,21 +108,21 @@ def render(lang, page_path=None):
   </div></header>
   <main id="main">
     <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy"><div class="hero-eyebrow"><span class="eyebrow">KENTECH · ENERGY ENGINEERING</span>{preview}</div>
+      <div class="hero-copy"><div class="hero-eyebrow"><span class="eyebrow">DEEPMATHLAB / KENTECH</span></div>
         <h1 id="hero-title">{c('hero_title')}</h1><p class="hero-subtitle">{c('hero_subtitle')}</p>
-        <p class="hero-intro">{c('hero_intro')}</p><div class="hero-buttons"><a class="button-primary" href="#research">{c('hero_cta')}<span aria-hidden="true">↗</span></a><a class="button-primary button-secondary" href="#people">{c('hero_secondary')}<span aria-hidden="true">→</span></a></div>
+        <p class="hero-intro">{c('hero_intro')}</p><p class="hero-affiliation">{c('hero_affiliation')} <a href="#people">{c('pi_name')}</a> · {c('hero_department')}</p><div class="hero-buttons"><a class="button-primary" href="#research">{c('hero_cta')}<span aria-hidden="true">↗</span></a><a class="button-primary button-secondary" href="#publications">{c('hero_secondary')}<span aria-hidden="true">→</span></a></div>
       </div>
-      <figure class="hero-figure"><div class="figure-heading"><span>SPLINE SURFACE</span><span aria-hidden="true">01 / GEOMETRY</span></div><img src="./parametric-surface.svg" width="700" height="560" alt="{'Conceptual spline surface with a curved parameter grid and control points' if lang == 'en' else '곡면의 매개격자와 제어점을 나타낸 스플라인 개념도'}"><figcaption><span class="figure-line" aria-hidden="true"></span>{c('figure_caption')}</figcaption></figure>
+      <figure class="hero-figure"><div class="figure-heading"><span>GEOMETRY / APPROXIMATION</span><span aria-hidden="true">FIG. 01</span></div><img src="./geometry-study.svg?v={ASSET_VERSION}" width="700" height="600" alt="{'Conceptual surface with a parameter lattice, projection guides, and approximation points' if lang == 'en' else '매개격자, 투영선, 근사점을 갖는 곡면 개념도'}"><figcaption><span class="figure-line" aria-hidden="true"></span>{c('figure_caption')}</figcaption></figure>
       <div class="hero-strip"><span class="strip-label">RESEARCH FOCUS</span><span>{c('hero_strip')}</span><span class="strip-arrow" aria-hidden="true">↘</span></div>
     </section>
     <section class="section research-section" id="research" aria-labelledby="research-heading"><div class="container">
-      <div class="section-head"><div><p class="eyebrow section-number">01 / {t(DATA['nav']['research'])}</p><h2 id="research-heading">{c('research_heading')}</h2></div><p class="section-intro">{c('research_intro')}</p></div>
+      <div class="section-head"><div><p class="eyebrow section-number">01 / {t(DATA['nav']['research'])}</p><h2 id="research-heading">{c('research_heading')}</h2></div><div class="research-overview"><p class="section-intro">{c('research_intro')}</p><a class="text-link" href="{esc(DATA['research_url'])}" target="_blank" rel="noopener noreferrer">{c('research_source')}<span aria-hidden="true">↗</span></a></div></div>
       <div class="research-list">{research}</div>
     </div></section>
     <section class="section people-section container" id="people" aria-labelledby="people-heading">
       <div class="section-head"><div><p class="eyebrow section-number">02 / {t(DATA['nav']['people'])}</p><h2 id="people-heading">{c('people_heading')}</h2></div><span class="section-aside">KENTECH<br>NAJU, SOUTH KOREA</span></div>
       <article class="pi-profile"><figure class="pi-portrait"><img src="./hyunju-kim.jpg" width="123" height="148" alt="{'Hyunju Kim, Associate Professor at KENTECH' if lang == 'en' else 'KENTECH 김현주 부교수'}" loading="lazy"><figcaption>KENTECH · HYUNJU KIM</figcaption></figure>
-        <div class="pi-text"><p class="eyebrow">{c('pi_label')}</p><h3>{c('pi_name')} <span>{'김현주' if lang == 'en' else 'Hyunju Kim'}</span></h3><p class="pi-role">{c('pi_role')}</p><p class="pi-department">{c('pi_department')}</p><p class="pi-description">{c('pi_description')}</p><a class="text-link" href="{esc(DATA['profile_url'])}" target="_blank" rel="noopener noreferrer">{c('profile_link')}<span aria-hidden="true">↗</span></a></div>
+        <div class="pi-text"><p class="eyebrow">{c('pi_label')}</p><h3>{c('pi_name')} <span>{'김현주' if lang == 'en' else 'Hyunju Kim'}</span></h3><p class="pi-role">{c('pi_role')}</p><p class="pi-department">{c('pi_department')}</p><p class="pi-description">{c('pi_description')}</p><p class="pi-education"><span>{c('education_label')}</span>{c('pi_education')}</p><a class="text-link" href="{esc(DATA['academic_url'])}" target="_blank" rel="noopener noreferrer">{c('profile_link')}<span aria-hidden="true">↗</span></a></div>
       </article>
       <div class="members-heading"><h3>{c('members_label')}</h3></div><div class="member-list">{members}</div><p class="members-note">{c('members_note')}</p>
     </section>
