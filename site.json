@@ -26,15 +26,19 @@
   "nav": {
     "research": {
       "en": "Research",
-      "ko": "연구 소개"
+      "ko": "연구"
     },
     "people": {
       "en": "People",
-      "ko": "교수 · 구성원"
+      "ko": "구성원"
     },
     "publications": {
       "en": "Publications",
       "ko": "논문"
+    },
+    "join": {
+      "en": "Join",
+      "ko": "연구 참여"
     },
     "contact": {
       "en": "Contact",
@@ -63,8 +67,8 @@
       "ko": "연구 분야"
     },
     "hero_secondary": {
-      "en": "Selected publications",
-      "ko": "주요 논문"
+      "en": "Selected work",
+      "ko": "주요 연구 논문"
     },
     "figure_caption": {
       "en": "A study in geometry and approximation · conceptual illustration",
@@ -187,8 +191,8 @@
       "ko": "맨 위로"
     },
     "footer_note": {
-      "en": "Website draft · Complete group directory under review.",
-      "ko": "홈페이지 시안 · 전체 구성원 명단 확인 중."
+      "en": "Website draft · Group directory and project materials are being updated.",
+      "ko": "홈페이지 시안 · 구성원과 프로젝트 자료 업데이트 중."
     },
     "skip": {
       "en": "Skip to main content",
@@ -217,6 +221,170 @@
     "hero_department": {
       "en": "Energy Engineering",
       "ko": "에너지공학부"
+    },
+    "about_heading": {
+      "en": "A mathematical perspective<br>on scientific computation.",
+      "ko": "과학계산을 바라보는<br>수학적 관점."
+    },
+    "about_intro": {
+      "en": "DeepMathLab is a computational mathematics research group at KENTECH, led by Hyunju Kim. We study the relationship between the structure of differential equations and the numerical methods used to solve them.",
+      "ko": "DeepMathLab은 KENTECH 김현주 교수 연구실입니다. 미분방정식의 구조와 이를 풀기 위한 수치해석 방법 사이의 관계를 탐구합니다."
+    },
+    "about_detail": {
+      "en": "Our interests connect geometric approximation, fractional-order equations, and computational mechanics. This website brings together the group’s research themes, people, and selected published work.",
+      "ko": "기하 근사, 분수차 방정식, 전산역학을 서로 연결하여 연구합니다. 연구 분야와 구성원, 주요 게재 논문을 이곳에서 소개합니다."
+    },
+    "all_research": {
+      "en": "Explore all research themes",
+      "ko": "연구 분야 자세히 보기"
+    },
+    "all_people": {
+      "en": "Meet the group",
+      "ko": "전체 구성원 보기"
+    },
+    "all_publications": {
+      "en": "View selected bibliography",
+      "ko": "주요 논문 목록 보기"
+    },
+    "group_photo": {
+      "en": "Group photograph",
+      "ko": "연구실 단체 사진"
+    },
+    "research_visual": {
+      "en": "Research figure",
+      "ko": "연구 그림"
+    },
+    "image_pending": {
+      "en": "Image forthcoming",
+      "ko": "사진·그림 준비 중"
+    },
+    "methods_label": {
+      "en": "METHODS",
+      "ko": "연구 방법"
+    },
+    "problems_label": {
+      "en": "PROBLEM CLASSES",
+      "ko": "대상 문제"
+    },
+    "related_papers": {
+      "en": "Related publications",
+      "ko": "관련 논문"
+    },
+    "research_context": {
+      "en": "Research themes are based on the faculty’s public research profile.",
+      "ko": "연구 분야는 교수님의 공개 연구 소개를 바탕으로 정리했습니다."
+    },
+    "page_research_title": {
+      "en": "Research themes.",
+      "ko": "연구 분야."
+    },
+    "page_research_intro": {
+      "en": "Numerical analysis, geometric approximation, and differential equations form the foundation of our work in scientific computing.",
+      "ko": "수치해석, 기하 근사, 미분방정식은 연구실의 과학계산 연구를 이루는 기반입니다."
+    },
+    "page_people_title": {
+      "en": "The research group.",
+      "ko": "연구실 구성원."
+    },
+    "page_people_intro": {
+      "en": "Faculty and researchers working together in computational mathematics at KENTECH.",
+      "ko": "KENTECH에서 계산수학을 함께 연구하는 교수와 연구 구성원을 소개합니다."
+    },
+    "page_publications_title": {
+      "en": "Publications.",
+      "ko": "논문."
+    },
+    "page_publications_intro": {
+      "en": "Selected published papers spanning fractional differential equations, isogeometric analysis, and methods for singular problems.",
+      "ko": "분수차 미분방정식, 등기하해석, 특이점 문제의 수치해석 방법에 관한 주요 게재 논문입니다."
+    },
+    "bibtex_download": {
+      "en": "Download bibliography (.bib)",
+      "ko": "논문 서지 정보 내려받기 (.bib)"
+    },
+    "page_join_title": {
+      "en": "Join & collaborate.",
+      "ko": "연구 참여와 협업."
+    },
+    "page_join_intro": {
+      "en": "Interested in computational mathematics? Contact the group about research study, collaboration, or a possible visit.",
+      "ko": "계산수학에 관심이 있다면 연구 참여, 협업, 방문 가능 여부에 관해 연구실에 문의해주세요."
+    },
+    "join_heading": {
+      "en": "Research begins<br>with a conversation.",
+      "ko": "연구는<br>대화에서 시작됩니다."
+    },
+    "join_home_intro": {
+      "en": "Find the right route for research enquiries, graduate study, or collaboration.",
+      "ko": "연구 참여, 대학원 연구, 협업에 관한 문의 방법을 안내합니다."
+    },
+    "join_link": {
+      "en": "Research enquiries & visits",
+      "ko": "연구 참여·방문 문의"
+    },
+    "join_prepare": {
+      "en": "What to include in an enquiry",
+      "ko": "문의에 함께 알려주시면 좋은 내용"
+    },
+    "join_status": {
+      "en": "Available supervision, visiting arrangements, and any open positions are confirmed directly with the group. Formal degree admissions are handled by KENTECH.",
+      "ko": "지도 가능 여부, 방문 일정, 모집 중인 자리는 연구실에 직접 확인해주세요. 학위 과정의 공식 입학 절차는 KENTECH에서 안내합니다."
+    },
+    "join_email_cta": {
+      "en": "Email the group",
+      "ko": "연구실에 이메일 보내기"
+    },
+    "university_info": {
+      "en": "KENTECH information",
+      "ko": "KENTECH 안내"
+    },
+    "page_contact_title": {
+      "en": "Contact.",
+      "ko": "연락처."
+    },
+    "page_contact_intro": {
+      "en": "We are based at the Korea Institute of Energy Technology in Naju, Republic of Korea.",
+      "ko": "연구실은 대한민국 나주의 한국에너지공과대학교에 있습니다."
+    },
+    "campus_address": {
+      "en": "Korea Institute of Energy Technology\n200 Hyeoksin-ro, Naju, Jeollanam-do 58330\nRepublic of Korea",
+      "ko": "한국에너지공과대학교\n전라남도 나주시 혁신로 200, 58330\n대한민국"
+    },
+    "campus_label": {
+      "en": "CAMPUS ADDRESS",
+      "ko": "캠퍼스 주소"
+    },
+    "visit_note": {
+      "en": "Please contact the group before arranging a visit. Building and room details can be confirmed by email.",
+      "ko": "방문을 계획하신다면 먼저 연구실에 연락해주세요. 건물과 호실은 이메일로 확인할 수 있습니다."
+    },
+    "faculty_label": {
+      "en": "Faculty",
+      "ko": "지도교수"
+    },
+    "current_members": {
+      "en": "Current researchers",
+      "ko": "현재 구성원"
+    },
+    "alumni_heading": {
+      "en": "Alumni",
+      "ko": "이전 구성원"
+    },
+    "resources_title": {
+      "en": "Software & resources.",
+      "ko": "소프트웨어와 자료."
+    },
+    "resources_intro": {
+      "en": "Public research tools, datasets, and learning materials from the group.",
+      "ko": "연구실의 공개 연구 도구, 데이터, 학습 자료입니다."
+    },
+    "news_title": {
+      "en": "News & events.",
+      "ko": "소식과 행사."
+    },
+    "news_intro": {
+      "en": "Updates from the group’s research and academic activities.",
+      "ko": "연구실의 연구와 학술 활동 소식을 전합니다."
     }
   },
   "research": [
@@ -239,6 +407,13 @@
         "Isogeometric analysis",
         "Generalized FEM",
         "Mapping methods"
+      ],
+      "scope": {
+        "en": "Elliptic boundary value problems; cracks and corners; singular perturbations and boundary layers.",
+        "ko": "타원형 경계값 문제, 균열과 모서리, 특이 섭동과 경계층."
+      },
+      "related_dois": [
+        "10.1016/j.cma.2012.09.009"
       ]
     },
     {
@@ -260,6 +435,16 @@
         "Fractional dynamics",
         "Time-fractional PDEs",
         "Fast algorithms"
+      ],
+      "scope": {
+        "en": "Fractional initial and boundary value problems; nonlinear time-fractional PDEs; fractional dynamical systems.",
+        "ko": "분수차 초기값·경계값 문제, 비선형 시간 분수차 편미분방정식, 분수차 동역학계."
+      },
+      "related_dois": [
+        "10.1186/s13662-021-03355-3",
+        "10.1016/j.apnum.2021.01.013",
+        "10.1016/j.cam.2020.112988",
+        "10.1016/j.amc.2020.125228"
       ]
     },
     {
@@ -281,6 +466,13 @@
         "Elasticity",
         "Plate models",
         "Singular PDEs"
+      ],
+      "scope": {
+        "en": "Elasticity with cracks or singularities; Reissner–Mindlin plate models; fourth-order partial differential equations.",
+        "ko": "균열과 특이점을 갖는 탄성 문제, Reissner–Mindlin 판 모델, 4차 편미분방정식."
+      },
+      "related_dois": [
+        "10.1002/num.22277"
       ]
     }
   ],
@@ -382,5 +574,71 @@
     }
   ],
   "research_url": "https://kentech.ac.kr/submenu.do?menuurl=JPQbgLY0JlNRZPvKXFeixQ%3D%3D&siteName=hjkim",
-  "academic_url": "https://kentech.ac.kr/submenu.do?menuurl=yar34NkQy16gucKYFAFqrw%3D%3D&siteName=hjkim"
+  "academic_url": "https://kentech.ac.kr/submenu.do?menuurl=yar34NkQy16gucKYFAFqrw%3D%3D&siteName=hjkim",
+  "media": {
+    "group": null,
+    "geometry": null,
+    "fractional": null,
+    "mechanics": null
+  },
+  "alumni": [],
+  "resources": [],
+  "news": [],
+  "join_paths": [
+    {
+      "title": {
+        "en": "Undergraduate research",
+        "ko": "학부 연구"
+      },
+      "description": {
+        "en": "Tell us about your mathematical background, programming experience, and the research topics you would like to explore.",
+        "ko": "수학 배경, 프로그래밍 경험, 탐구하고 싶은 연구 주제를 알려주세요."
+      }
+    },
+    {
+      "title": {
+        "en": "Graduate research",
+        "ko": "대학원 연구"
+      },
+      "description": {
+        "en": "Enquire about research fit and potential supervision. Include your current institution, academic background, and intended study period.",
+        "ko": "연구 관심 분야와 지도 가능 여부를 문의해주세요. 현재 소속, 학업 배경, 희망 연구 기간을 함께 알려주시면 좋습니다."
+      }
+    },
+    {
+      "title": {
+        "en": "Collaboration & visits",
+        "ko": "협업과 방문"
+      },
+      "description": {
+        "en": "Share a concise description of your research question, relevant methods, and the collaboration or visit you have in mind.",
+        "ko": "연구 질문과 관련 방법, 생각하고 있는 협업 방식이나 방문 계획을 간략히 소개해주세요."
+      }
+    }
+  ],
+  "enquiry_fields": [
+    {
+      "en": "Your name, institution, and current role",
+      "ko": "이름, 소속, 현재 역할"
+    },
+    {
+      "en": "Research interests and relevant mathematical or computational experience",
+      "ko": "연구 관심 분야와 관련 수학·계산 경험"
+    },
+    {
+      "en": "The type of enquiry and your intended period",
+      "ko": "문의 목적과 희망 기간"
+    },
+    {
+      "en": "A CV or personal website, if useful",
+      "ko": "참고할 수 있는 이력서나 개인 웹사이트"
+    }
+  ],
+  "design_references": [
+    "https://bair.berkeley.edu/about.html",
+    "https://langerlab.mit.edu/",
+    "https://asl.ethz.ch/",
+    "https://mlg.eng.cam.ac.uk/",
+    "https://is.mpg.de/ps"
+  ]
 }
