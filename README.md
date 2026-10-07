@@ -24,3 +24,9 @@ This first public version is marked as a website concept. The complete member ro
 - The spline surface is a conceptual vector illustration, not a simulation result.
 
 Source details and verification date are recorded in `site.json`.
+
+## Link previews
+
+`share-card.svg` is the editable brand artwork and `share-card.png` is its 1200 × 630 export. Both English and Korean pages explicitly select the PNG with Open Graph and Twitter Card metadata. Link previews use this brand artwork.
+
+After changing the shared image, update its version in `SHARE_IMAGE` in `build.py` and rebuild both pages. Kakao may cache previous URL metadata; its URL metadata tool can reset the cached preview.

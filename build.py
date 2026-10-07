@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "site.json").read_text(encoding="utf-8"))
 OUT = ROOT
 OUT.mkdir(exist_ok=True)
+PUBLIC_ORIGIN = "https://deepmathlab.github.io/"
+SHARE_IMAGE = PUBLIC_ORIGIN + "share-card.png?v=20261007"
 
 
 def esc(value):
@@ -48,6 +50,10 @@ def render(lang):
     alternate = "ko.html" if lang == "en" else "index.html"
     alternate_label = "한국어" if lang == "en" else "EN"
     title = "DeepMathLab | Computational Mathematics | KENTECH" if lang == "en" else "DeepMathLab | 김현주 교수 연구실 | KENTECH"
+    canonical = PUBLIC_ORIGIN + ("ko.html" if lang == "ko" else "")
+    description = esc(DATA["copy"]["hero_intro"][lang])
+    share_title = "DeepMathLab | KENTECH"
+    share_alt = "DeepMathLab — Computational Mathematics and Scientific Computing at KENTECH"
     preview = f'<span class="preview-label"><span></span>{c("preview")}</span>' if DATA["preview"] else ""
     preview_footer = f'<p class="footer-note">{c("footer_note")}</p>' if DATA["preview"] else ""
     return f'''<!doctype html>
@@ -58,6 +64,25 @@ def render(lang):
   <meta name="theme-color" content="#ffffff">
   <meta name="robots" content="{'noindex,nofollow' if DATA['preview'] else 'index,follow'}">
   <title>{title}</title>
+  <link rel="canonical" href="{canonical}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DeepMathLab">
+  <meta property="og:title" content="{share_title}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:locale" content="{'ko_KR' if lang == 'ko' else 'en_US'}">
+  <meta property="og:image" content="{SHARE_IMAGE}">
+  <meta property="og:image:secure_url" content="{SHARE_IMAGE}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{share_alt}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{share_title}">
+  <meta name="twitter:description" content="{description}">
+  <meta name="twitter:image" content="{SHARE_IMAGE}">
+  <meta name="twitter:image:alt" content="{share_alt}">
+  <link rel="image_src" href="{SHARE_IMAGE}">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
   <link rel="alternate" hreflang="en" href="./index.html">
