@@ -9,7 +9,8 @@ function applyTheme(theme, remember = false) {
   if (themeToggle) {
     themeToggle.hidden = false;
     themeToggle.setAttribute("aria-label", theme === "dark" ? themeToggle.dataset.labelLight : themeToggle.dataset.labelDark);
-    themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+    themeToggle.title = themeToggle.getAttribute("aria-label");
+    themeToggle.removeAttribute("aria-pressed");
   }
   if (remember) {
     try { localStorage.setItem("deepmathlab-theme", theme); } catch (_) { /* Preference storage is optional. */ }

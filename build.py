@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / 'site.json').read_text(encoding='utf-8'))
 PUBLIC_ORIGIN = 'https://deepmathlab.github.io/'
-ASSET_VERSION = '20261008-v1'
+ASSET_VERSION = '20261008-v2'
 SHARE_IMAGE = PUBLIC_ORIGIN + 'share-card.png?v=' + ASSET_VERSION
 FONT_STYLESHEET = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap'
 THEME_INIT = """<script>(function(){var theme='light';try{var saved=localStorage.getItem('deepmathlab-theme');theme=saved==='light'||saved==='dark'?saved:(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}catch(e){theme=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=theme;document.documentElement.classList.add('js');})();</script>"""
