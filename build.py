@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / 'site.json').read_text(encoding='utf-8'))
 PUBLIC_ORIGIN = 'https://deepmathlab.github.io/'
-ASSET_VERSION = '20261007-global2'
+ASSET_VERSION = '20261007-contrast2'
 SHARE_IMAGE = PUBLIC_ORIGIN + 'share-card.png?v=' + ASSET_VERSION
 PAGES = ['home', 'research', 'people', 'publications', 'join', 'contact']
 if DATA.get('resources'):
@@ -146,7 +146,7 @@ def render(lang, page='home', page_path=None):
 <html lang="{lang}"><head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title}</title><meta name="description" content="{esc(description)}">
-  <meta name="theme-color" content="#f7f8f5"><meta name="robots" content="{'noindex,nofollow' if DATA['preview'] else 'index,follow'}">
+  <meta name="theme-color" content="#ffffff"><meta name="robots" content="{'noindex,nofollow' if DATA['preview'] else 'index,follow'}">
   <link rel="canonical" href="{canonical}"><meta property="og:type" content="website"><meta property="og:site_name" content="DeepMathLab">
   <meta property="og:title" content="{title}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}">
   <meta property="og:locale" content="{'ko_KR' if lang == 'ko' else 'en_US'}"><meta property="og:image" content="{SHARE_IMAGE}"><meta property="og:image:secure_url" content="{SHARE_IMAGE}">
@@ -156,7 +156,7 @@ def render(lang, page='home', page_path=None):
   <link rel="alternate" hreflang="en" href="./{route(page, 'en')}"><link rel="alternate" hreflang="ko" href="./{route(page, 'ko')}"><script src="./app.js?v={ASSET_VERSION}" defer></script>
 </head><body class="lang-{lang} page-{page}" id="top">
   <a class="skip-link" href="#main">{c('skip')}</a><header class="site-header"><div class="container header-inner"><a class="wordmark" href="{r('home')}" aria-label="DeepMathLab home">
-    <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="6" fill="#1d6258"/><path d="M11 29V11h7a8 8 0 0 1 0 18h-7m12-18v18m-7-18v18" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg><span><strong>{t(DATA['brand'])}</strong><small>{t(DATA['brand_sub'])}</small></span></a>
+    <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="6" fill="#365BFF"/><path d="M11 29V11h7a8 8 0 0 1 0 18h-7m12-18v18m-7-18v18" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg><span><strong>{t(DATA['brand'])}</strong><small>{t(DATA['brand_sub'])}</small></span></a>
     <div class="header-actions"><nav id="navigation" aria-label="{'Primary navigation' if lang == 'en' else '주 메뉴'}">{navigation}</nav><a class="language-switch" href="./{alternate}" lang="{'ko' if lang == 'en' else 'en'}" aria-label="{'한국어 페이지로 전환' if lang == 'en' else 'Switch to English'}">{'한국어' if lang == 'en' else 'EN'}</a><button class="menu-toggle" aria-label="{c('menu')}" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button></div></div></header>
   <main id="main">{content}</main><footer class="site-footer"><div class="container"><div class="footer-top"><div><strong>{t(DATA['brand'])}</strong><span>Computational Mathematics & Scientific Computing</span></div>{link(c('back_top'), '#top')}</div><div class="footer-bottom"><span>© 2026 · DeepMathLab · KENTECH</span>{preview_footer}</div></div></footer>
 </body></html>'''

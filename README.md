@@ -51,8 +51,12 @@ International benchmarks informed structure, not research claims or group scale:
 - [Cambridge Machine Learning Group](https://mlg.eng.cam.ac.uk/): research themes linked to papers; role-based people, former members and degree enquiries.
 - [MPI Perceiving Systems](https://is.mpg.de/ps): research department; projects, publications, code/data and visitors/alumni.
 
-No reference-site text, images, logos, code, achievements, or staff records are copied. The illustration is a conceptual geometry drawing, not a simulation result. The teal/sage/graphite atlas design and monogram are DeepMathLab's own website assets.
+No reference-site text, images, logos, code, achievements, or staff records are copied. The illustration is a conceptual geometry drawing, not a simulation result. The white/charcoal/blue design, mathematical illustration, and monogram are DeepMathLab's own website assets.
 
 ## Sharing
 
 `share-card.svg` is the editable artwork; `share-card.png` is its 1200×630 export. All pages explicitly choose it as the Open Graph/Twitter image. Update `ASSET_VERSION` in `build.py` after presentation or share-art changes. Kakao may keep previous URL previews; `home.html` gives a separate sharing URL. Its `og:url` must match its actual address because [Kakao may scrape the `og:url` destination](https://devtalk.kakao.com/t/og-url/136380).
+
+## Color and visual refinement
+
+The palette follows a design interpretation of [Figma's 2026 web design guidance](https://www.figma.com/resource-library/web-design-trends/) and public [Figma Community website templates](https://www.figma.com/community/website-templates), including the Recent listing. Figma presents vibrant contrast, bold typography, and spatial visuals as directions; it does not prescribe a single trend color for academic websites. This site uses white, charcoal and vivid blue, with a restrained illuminated mathematical surface on a dark field. No Figma template assets, source code, or text are copied. Empty photo/figure spaces remain available for real lab material.
