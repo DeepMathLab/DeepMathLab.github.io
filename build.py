@@ -201,7 +201,6 @@ def render(page='home', page_path=None):
         if key in PAGES:
             nav_items[key] = {'en': key.title(), 'ko': '자료' if key == 'resources' else '소식'}
     navigation = ''.join('<a href="{}"{}>{}</a>'.format(r(key), ' aria-current="page"' if key == page else '', t(label)) for key, label in nav_items.items())
-    creator_credit = f'<p class="creator-credit">{c("creator_credit")}</p>'
     footer_links = ''.join(f'<a href="{r(key)}">{t(label)}</a>' for key, label in nav_items.items())
     return f'''<!doctype html>
 <html lang="{lang}"><head>
@@ -221,7 +220,7 @@ def render(page='home', page_path=None):
   <a class="skip-link" href="#main">{c('skip')}</a><header class="site-header"><div class="container header-inner"><a class="wordmark" href="{r('home')}" aria-label="DEEP-MATH Lab home">
     <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="6" fill="#365BFF"/><path d="M11 29V11h7a8 8 0 0 1 0 18h-7m12-18v18m-7-18v18" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg><span><strong>{t(DATA['brand'])}</strong><small>{t(DATA['brand_sub'])}</small></span></a>
     <div class="header-actions"><nav id="navigation" aria-label="{'Primary navigation' if lang == 'en' else '주 메뉴'}">{navigation}</nav><button class="menu-toggle" aria-label="{c('menu')}" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button></div></div></header>
-  <main id="main" tabindex="-1">{content}</main><footer class="site-footer"><div class="container"><div class="footer-top"><div><strong>{t(DATA['brand'])}</strong><span>{c('footer_tagline')}</span></div>{link(c('back_top'), '#top')}</div><nav class="footer-navigation" aria-label="{c('footer_navigation')}">{footer_links}<a href="mailto:{esc(DATA['email'])}">{esc(DATA['email'])}</a></nav><div class="footer-bottom"><span>© 2026 · {t(DATA['brand'])} · KENTECH · <a class="font-license-link" href="https://github.com/DeepMathLab/DeepMathLab.github.io/blob/main/ASSET_LICENSES.md" target="_blank" rel="noopener noreferrer">Font licenses</a></span>{creator_credit}</div></div></footer>
+  <main id="main" tabindex="-1">{content}</main><footer class="site-footer"><div class="container"><div class="footer-top"><div><strong>{t(DATA['brand'])}</strong><span>{c('footer_tagline')}</span></div>{link(c('back_top'), '#top')}</div><nav class="footer-navigation" aria-label="{c('footer_navigation')}">{footer_links}<a href="mailto:{esc(DATA['email'])}">{esc(DATA['email'])}</a></nav><div class="footer-bottom"><span>© 2026 · {t(DATA['brand'])} · KENTECH · <a class="font-license-link" href="https://github.com/DeepMathLab/DeepMathLab.github.io/blob/main/ASSET_LICENSES.md" target="_blank" rel="noopener noreferrer">Font licenses</a></span></div></div></footer>
 </body></html>'''
 
 

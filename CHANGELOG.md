@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1 — 2026-10-09
+
+- Remove the personal creator credit from every page's shared footer.
+
 ## 1.4.0 — 2026-10-09
 
 - Replace small homepage plots with three original, labeled conceptual method diagrams; retain source research figures and full-size originals on Research.

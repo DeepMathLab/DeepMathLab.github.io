@@ -119,7 +119,6 @@
     "group_panel_location": "Naju, Republic of Korea",
     "group_panel_research": "Mathematical modeling<br>Numerical methods<br>Scientific machine learning",
     "footer_navigation": "Explore the lab",
-    "creator_credit": "Created by Donghyeok Kim.",
     "research_connections_title": "Research connections",
     "research_connections_intro": "We connect fundamental mathematics with questions across these fields through mathematical modeling, numerical analysis, and scientific machine learning.",
     "numerical_foundations_heading": "Numerical research foundations",
@@ -345,7 +344,7 @@
     "https://mlg.eng.cam.ac.uk/",
     "https://is.mpg.de/ps"
   ],
-  "site_version": "1.4.0",
+  "site_version": "1.4.1",
   "updated_on": "2026-10-09",
   "brand_full_name": "Deep-learning Engineering and Explanatory Principles in Mathematics",
   "site_description": "Mathematical foundations and a research hub for AI, hydrogen, batteries, power grids, and nuclear research at KENTECH, led by Hyunju Kim.",

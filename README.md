@@ -81,7 +81,7 @@ Members may have `photo`, intrinsic `photo_width`/`photo_height`, `research_inte
 
 Research wording and faculty background follow [KENTECH Introduction](https://kentech.ac.kr/submenu.do?menuurl=JPQbgLY0JlNRZPvKXFeixQ%3D%3D&siteName=hjkim), [Academics](https://kentech.ac.kr/submenu.do?menuurl=yar34NkQy16gucKYFAFqrw%3D%3D&siteName=hjkim) and the [official publication list](https://kentech.ac.kr/submenu.do?menuurl=EmPii7OvsAgMn8WvyAXCLg%3D%3D&siteName=hjkim). Selected-paper metadata was checked against publisher/Crossref records. The current portrait was supplied by the user on 8 October 2026 and edited with the built-in image-generation tool to remove the distracting background and adjacent person. These records do not establish the current status of unlisted projects or latest lab achievements.
 
-The lab contact email comes from the user. The DEEP-MATH name and three research axes follow the professor-supplied 2025 introduction. The professor's latest website direction defines the lab as a mathematical foundation and research hub for AI, hydrogen, batteries, power grids and nuclear research. These fields describe its research role rather than a list of claimed experimental projects. `preview: false` enables indexing of public content. The 404 page remains `noindex,follow`. The creator credit is a small English line in the shared footer.
+The lab contact email comes from the user. The DEEP-MATH name and three research axes follow the professor-supplied 2025 introduction. The professor's latest website direction defines the lab as a mathematical foundation and research hub for AI, hydrogen, batteries, power grids and nuclear research. These fields describe its research role rather than a list of claimed experimental projects. `preview: false` enables indexing of public content. The 404 page remains `noindex,follow`. The shared footer contains the lab identity and font-license link without a personal creator credit.
 
 International benchmarks informed information architecture, not research claims or group scale:
 
@@ -100,7 +100,7 @@ Reference-site wording, logos, template code and staff records are not copied. T
 
 ## Version control and indexing
 
-The current release is **1.4.0**. The `site_version` value also supplies the asset cache version. Keep editable sources and generated pages together in Git; [CHANGELOG.md](CHANGELOG.md) records user-visible releases. Run `python3 build.py` before publishing changes.
+The current release is **1.4.1**. The `site_version` value also supplies the asset cache version. Keep editable sources and generated pages together in Git; [CHANGELOG.md](CHANGELOG.md) records user-visible releases. Run `python3 build.py` before publishing changes.
 
 The build generates `sitemap.xml` with the six canonical content pages and `robots.txt` with its public location. `home.html` is a sharing alias and canonicalizes to the root; it and the 404 page are omitted from the sitemap. `updated_on` supplies the sitemap modification date and should change when content changes.
 
