@@ -8,10 +8,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / 'site.json').read_text(encoding='utf-8'))
 PUBLIC_ORIGIN = 'https://deepmathlab.github.io/'
-ASSET_VERSION = '20261008-v3'
+ASSET_VERSION = '20261008-v4'
 SHARE_IMAGE = PUBLIC_ORIGIN + 'share-card.png?v=' + ASSET_VERSION
 FONT_STYLESHEET = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap'
-THEME_INIT = """<script>(function(){var theme='light';try{var saved=localStorage.getItem('deepmathlab-theme');theme=saved==='light'||saved==='dark'?saved:(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}catch(e){theme=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=theme;document.documentElement.classList.add('js');})();</script>"""
 PAGES = ['home', 'research', 'people', 'publications', 'join', 'contact', 'not-found']
 if DATA.get('resources'):
     PAGES.append('resources')
@@ -60,13 +59,6 @@ def render(page='home', page_path=None):
         kind = 'external' if external else 'internal'
         return f'<a class="{cls}" data-link-kind="{kind}" href="{esc(url)}"{external}{download_attr}>{label}<span aria-hidden="true">{glyph}</span></a>'
 
-    def geometry():
-        drawing = (ROOT / 'geometry-study.svg').read_text(encoding='utf-8')
-        drawing = re.sub(r'(<title id="geometry-title">).*?(</title>)', lambda m: m[1] + c('geometry_surface') + m[2], drawing, flags=re.S)
-        drawing = re.sub(r'(<desc id="geometry-description">).*?(</desc>)', lambda m: m[1] + c('geometry_surface_desc') + m[2], drawing, flags=re.S)
-        controls = ''.join(f'<button type="button" data-geometry-view="{view}" data-description="{c("geometry_" + view + "_desc")}" aria-pressed="false">{c("geometry_" + view)}</button>' for view in ['surface', 'mesh', 'domain'])
-        return f'<div class="geometry-stage">{drawing}</div><div class="geometry-controls" role="group" aria-label="{c("geometry_controls")}" hidden>{controls}</div>'
-
     def group_summary():
         return f'<div class="group-summary"><p class="eyebrow">KENTECH / ENERGY ENGINEERING</p><h3>{c("group_panel_title")}</h3><dl class="group-facts"><div><dt>{c("location_label")}</dt><dd>{c("group_panel_location")}</dd></div><div><dt>{t(DATA["nav"]["research"])}</dt><dd>{c("group_panel_research")}</dd></div></dl>{link(c("all_people"), r("people"))}</div>'
 
@@ -109,11 +101,12 @@ def render(page='home', page_path=None):
     pi = f'''<article class="pi-profile" id="hyunju-kim"><figure class="pi-portrait"><img src="./hyunju-kim-portrait.webp" width="640" height="800" alt="{c('pi_name')}" loading="lazy" decoding="async"><figcaption>KENTECH · HYUNJU KIM</figcaption></figure>
       <div class="pi-text"><p class="eyebrow">{c('pi_label')}</p><h3>{c('pi_name')}</h3><p class="pi-role">{c('pi_role')}</p><p class="pi-department">{c('pi_department')}</p><p class="pi-description">{c('pi_description')}</p><p class="pi-education"><span>{c('education_label')}</span>{c('pi_education')}</p>{link(c('profile_link'), DATA['academic_url'])}</div></article>'''
     join_cards = ''.join(f'<article class="join-card"><p class="eyebrow">0{i+1}</p><h2>{t(item["title"])}</h2><p>{t(item["description"])}</p></article>' for i, item in enumerate(DATA['join_paths']))
-    title = 'DeepMathLab | Computational Mathematics | KENTECH' if lang == 'en' else 'DeepMathLab | 김현주 교수 연구실 | KENTECH'
+    title = 'DeepMathLab | Hyunju Kim | Computational Mathematics at KENTECH'
     if page != 'home':
         title = f'{t(DATA["nav"].get(page, page))} | DeepMathLab | KENTECH'
     description = DATA['copy']['hero_intro'] if page == 'home' else DATA['copy'].get('page_' + page + '_intro', DATA['copy'].get(page + '_intro', DATA['copy']['hero_intro']))
-    canonical = PUBLIC_ORIGIN + (page_path if page_path is not None else ('' if page == 'home' and lang == 'en' else route(page, lang)))
+    canonical = PUBLIC_ORIGIN + ('' if page == 'home' else route(page, lang))
+    share_url = PUBLIC_ORIGIN + (page_path if page_path is not None else ('' if page == 'home' else route(page, lang)))
     if page == 'home':
         featured = [DATA['publications'][0]] + [item for item in DATA['publications'] if item['year'] in (2018, 2013)]
         news = ''
@@ -122,7 +115,6 @@ def render(page='home', page_path=None):
         content = f'''<section class="hero container" aria-labelledby="hero-title"><div class="hero-copy"><div class="hero-eyebrow"><span class="eyebrow">DEEPMATHLAB / KENTECH</span></div>
           <h1 id="hero-title">{c('hero_title')}</h1><p class="hero-subtitle">{c('hero_subtitle')}</p><p class="hero-intro">{c('hero_intro')}</p>
           <p class="hero-affiliation">{c('hero_affiliation')} <a href="{r('people')}#hyunju-kim">{c('pi_name')}</a> · {c('hero_department')}</p><div class="hero-buttons">{link(c('hero_cta'), r('research'), 'button-primary')}{link(c('hero_secondary'), r('publications'), 'button-primary button-secondary')}</div></div>
-          <figure class="hero-figure"><div class="figure-heading"><span>GEOMETRY / APPROXIMATION</span><span aria-hidden="true">FIG. 01</span></div>{geometry()}<figcaption><span class="figure-line" aria-hidden="true"></span><span class="geometry-status" role="status" aria-live="polite">{c('geometry_surface_desc')}</span><span class="geometry-disclaimer">{'Conceptual illustration' if lang == 'en' else '개념도'}</span></figcaption></figure>
           <div class="hero-strip"><span class="strip-label">RESEARCH FOCUS</span><span>{c('hero_strip')}</span><span class="strip-arrow" aria-hidden="true">↘</span></div></section>
           <section class="section research-section" id="research"><div class="container"><div class="section-head"><div><p class="eyebrow section-number">01 / {t(DATA['nav']['research'])}</p><h2>{c('research_heading')}</h2></div><div class="research-overview"><p class="section-intro">{c('research_intro')}</p>{link(c('all_research'), r('research'), 'text-link section-link')}</div></div><div class="research-list">{research_cards}</div></div></section>
           <section class="section overview-section container" id="people"><div class="content-layout"><div class="content-main"><p class="eyebrow section-number">02 / {t(DATA['nav']['people'])}</p><h2>{c('about_heading')}</h2><p>{c('about_intro')}</p><p>{c('about_detail')}</p>{link(c('all_people'), r('people'))}</div><div class="content-aside">{media('group', c('group_photo')) or group_summary()}</div></div></section>
@@ -163,19 +155,17 @@ def render(page='home', page_path=None):
         if key in PAGES:
             nav_items[key] = {'en': key.title(), 'ko': '자료' if key == 'resources' else '소식'}
     navigation = ''.join('<a href="{}"{}>{}</a>'.format(r(key), ' aria-current="page"' if key == page else '', t(label)) for key, label in nav_items.items())
-    preview_footer = f'<p class="footer-note">{c("footer_note")}</p>' if DATA['preview'] else ''
+    creator_credit = f'<p class="creator-credit">{c("creator_credit")}</p>'
     footer_links = ''.join(f'<a href="{r(key)}">{t(label)}</a>' for key, label in nav_items.items())
-    theme_button = f'<button class="theme-toggle" type="button" aria-label="{c("theme_to_dark")}" data-label-dark="{c("theme_to_dark")}" data-label-light="{c("theme_to_light")}" hidden><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path class="icon-moon" d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8a8.5 8.5 0 1 0 11.5 11.5Z"/><g class="icon-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg><span class="theme-label">{c("theme_label")}</span></button>'
     return f'''<!doctype html>
 <html lang="{lang}"><head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   {'<base href="/">' if page == 'not-found' else ''}
-  {THEME_INIT}
-  <meta name="color-scheme" content="light dark"><meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light"><meta name="referrer" content="strict-origin-when-cross-origin">
   <title>{title}</title><meta name="description" content="{esc(description)}">
-  <meta name="theme-color" content="#ffffff"><meta name="robots" content="{'noindex,nofollow' if DATA['preview'] else 'index,follow'}">
+  <meta name="theme-color" content="#ffffff"><meta name="robots" content="{'noindex,follow' if page == 'not-found' else 'noindex,nofollow' if DATA['preview'] else 'index,follow'}">
   <link rel="canonical" href="{canonical}"><meta property="og:type" content="website"><meta property="og:site_name" content="DeepMathLab">
-  <meta property="og:title" content="{title}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}">
+  <meta property="og:title" content="{title}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{share_url}">
   <meta property="og:locale" content="{'ko_KR' if lang == 'ko' else 'en_US'}"><meta property="og:image" content="{SHARE_IMAGE}"><meta property="og:image:secure_url" content="{SHARE_IMAGE}">
   <meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="DeepMathLab — Computational Mathematics and Scientific Computing at KENTECH">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{esc(description)}"><meta name="twitter:image" content="{SHARE_IMAGE}"><link rel="image_src" href="{SHARE_IMAGE}">
@@ -185,8 +175,8 @@ def render(page='home', page_path=None):
 </head><body class="lang-{lang} page-{page}" id="top">
   <a class="skip-link" href="#main">{c('skip')}</a><header class="site-header"><div class="container header-inner"><a class="wordmark" href="{r('home')}" aria-label="{'DeepMathLab home' if lang == 'en' else 'DeepMathLab 홈'}">
     <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="6" fill="#365BFF"/><path d="M11 29V11h7a8 8 0 0 1 0 18h-7m12-18v18m-7-18v18" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg><span><strong>{t(DATA['brand'])}</strong><small>{t(DATA['brand_sub'])}</small></span></a>
-    <div class="header-actions"><nav id="navigation" aria-label="{'Primary navigation' if lang == 'en' else '주 메뉴'}">{navigation}</nav>{theme_button}<button class="menu-toggle" aria-label="{c('menu')}" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button></div></div></header>
-  <main id="main" tabindex="-1">{content}</main><footer class="site-footer"><div class="container"><div class="footer-top"><div><strong>{t(DATA['brand'])}</strong><span>Computational Mathematics & Scientific Computing</span></div>{link(c('back_top'), '#top')}</div><nav class="footer-navigation" aria-label="{c('footer_navigation')}">{footer_links}<a href="mailto:{esc(DATA['email'])}">{esc(DATA['email'])}</a></nav><div class="footer-bottom"><span>© 2026 · DeepMathLab · KENTECH</span>{preview_footer}</div></div></footer>
+    <div class="header-actions"><nav id="navigation" aria-label="{'Primary navigation' if lang == 'en' else '주 메뉴'}">{navigation}</nav><button class="menu-toggle" aria-label="{c('menu')}" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button></div></div></header>
+  <main id="main" tabindex="-1">{content}</main><footer class="site-footer"><div class="container"><div class="footer-top"><div><strong>{t(DATA['brand'])}</strong><span>Computational Mathematics & Scientific Computing</span></div>{link(c('back_top'), '#top')}</div><nav class="footer-navigation" aria-label="{c('footer_navigation')}">{footer_links}<a href="mailto:{esc(DATA['email'])}">{esc(DATA['email'])}</a></nav><div class="footer-bottom"><span>© 2026 · DeepMathLab · KENTECH</span>{creator_credit}</div></div></footer>
 </body></html>'''
 
 
@@ -197,4 +187,8 @@ for key in PAGES:
     built.append(name)
 (ROOT / 'home.html').write_text(render('home', 'home.html'), encoding='utf-8')
 (ROOT / 'publications.bib').write_text('\n\n'.join(bibtex(x) for x in DATA['publications']) + '\n', encoding='utf-8')
-print('Built', ', '.join(built), ', home.html and publications.bib')
+indexable = [key for key in PAGES if key != 'not-found']
+sitemap_urls = [PUBLIC_ORIGIN + ('' if key == 'home' else route(key)) for key in indexable]
+(ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{esc(url)}</loc><lastmod>{esc(DATA["updated_on"])}</lastmod></url>\n' for url in sitemap_urls) + '</urlset>\n', encoding='utf-8')
+(ROOT / 'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: ' + PUBLIC_ORIGIN + 'sitemap.xml\n', encoding='utf-8')
+print('Built', ', '.join(built), ', home.html, publications.bib, sitemap.xml and robots.txt')

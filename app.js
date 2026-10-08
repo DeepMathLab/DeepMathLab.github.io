@@ -1,24 +1,6 @@
 "use strict";
 
 const root = document.documentElement;
-const themeToggle = document.querySelector(".theme-toggle");
-const themeMeta = document.querySelector('meta[name="theme-color"]');
-function applyTheme(theme, remember = false) {
-  root.dataset.theme = theme;
-  if (themeMeta) themeMeta.content = theme === "dark" ? "#11141B" : "#FFFFFF";
-  if (themeToggle) {
-    themeToggle.hidden = false;
-    themeToggle.setAttribute("aria-label", theme === "dark" ? themeToggle.dataset.labelLight : themeToggle.dataset.labelDark);
-    themeToggle.title = themeToggle.getAttribute("aria-label");
-    themeToggle.removeAttribute("aria-pressed");
-  }
-  if (remember) {
-    try { localStorage.setItem("deepmathlab-theme", theme); } catch (_) { /* Preference storage is optional. */ }
-  }
-}
-applyTheme(root.dataset.theme === "dark" ? "dark" : "light");
-themeToggle?.addEventListener("click", () => applyTheme(root.dataset.theme === "dark" ? "light" : "dark", true));
-
 const menu = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#navigation");
 if (menu && navigation) {
@@ -44,54 +26,6 @@ if (menu && navigation) {
     if (event.matches) closeMenu();
   });
   root.classList.add("navigation-ready");
-}
-
-const geometryStage = document.querySelector(".geometry-stage");
-const geometryControls = document.querySelector(".geometry-controls");
-if (geometryStage && geometryControls) {
-  const buttons = [...geometryControls.querySelectorAll("[data-geometry-view]")];
-  const status = document.querySelector(".geometry-status");
-  function setGeometryView(button) {
-    geometryStage.dataset.view = button.dataset.geometryView;
-    buttons.forEach(item => item.setAttribute("aria-pressed", String(item === button)));
-    if (status) status.textContent = button.dataset.description;
-    const title = geometryStage.querySelector("title");
-    const description = geometryStage.querySelector("desc");
-    if (title) title.textContent = button.textContent;
-    if (description) description.textContent = button.dataset.description;
-  }
-  geometryControls.hidden = false;
-  buttons.forEach(button => button.addEventListener("click", () => setGeometryView(button)));
-  setGeometryView(buttons[0]);
-
-  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
-  const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
-  let frame = 0;
-  let pointer = null;
-  function resetGeometryTilt() {
-    if (frame) cancelAnimationFrame(frame);
-    frame = 0;
-    pointer = null;
-    geometryStage.style.setProperty("--tilt-x", "0deg");
-    geometryStage.style.setProperty("--tilt-y", "0deg");
-  }
-  geometryStage.addEventListener("pointermove", event => {
-    if (reducedMotion.matches || !finePointer.matches || event.pointerType === "touch") return;
-    pointer = { x: event.clientX, y: event.clientY };
-    if (frame) return;
-    frame = requestAnimationFrame(() => {
-      frame = 0;
-      if (!pointer || reducedMotion.matches || !finePointer.matches) return;
-      const box = geometryStage.getBoundingClientRect();
-      const x = Math.max(-1, Math.min(1, (pointer.x - box.left) / box.width * 2 - 1));
-      const y = Math.max(-1, Math.min(1, (pointer.y - box.top) / box.height * 2 - 1));
-      geometryStage.style.setProperty("--tilt-x", `${(-y * 4).toFixed(2)}deg`);
-      geometryStage.style.setProperty("--tilt-y", `${(x * 4).toFixed(2)}deg`);
-    });
-  }, { passive: true });
-  geometryStage.addEventListener("pointerleave", resetGeometryTilt);
-  reducedMotion.addEventListener("change", resetGeometryTilt);
-  finePointer.addEventListener("change", resetGeometryTilt);
 }
 
 const search = document.querySelector("#publication-search");

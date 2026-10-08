@@ -22,14 +22,14 @@ The current build produces eight HTML files:
 | `join.html` | Research and visitor enquiries |
 | `contact.html` | Contact and campus information |
 | `404.html` | Not-found page; root-relative base keeps links working from nested missing URLs |
-| `home.html` | Non-redirecting sharing alias with its own matching canonical and `og:url` |
+| `home.html` | Non-redirecting sharing alias; canonical points to the public root, while `og:url` preserves the sharing address |
 
 There are no Korean counterparts or language-switch controls. `publications.bib` contains the selected bibliography. Generated HTML, data, styles and assets are served from the repository root; the output is compatible with GitHub Pages and includes `.nojekyll`. Rebuild after content changes rather than editing generated HTML independently.
 
 ## Implemented behaviour
 
-- **Theme:** the first visit follows the operating-system light/dark preference unless a choice is saved in `localStorage`. The toggle persists that choice when storage is available, updates its accessible state and swaps its icon. Storage failure does not prevent use.
-- **Geometry:** the inline conceptual SVG has Surface, Mesh and Domain views. Controls update selected state, image description and status text. Fine-pointer hover adds a small tilt; touch and reduced-motion users do not receive it. Reduced motion disables nonessential transitions and smooth scrolling. Without JavaScript, the labelled SVG remains visible and controls stay hidden.
+- **Appearance:** a fixed light palette is used. There is no theme toggle, stored-theme lookup or system dark-mode override.
+- **Landing layout:** the introductory copy occupies the left column on desktop, with open whitespace on the right. No image, frame or placeholder copy is shown. Small screens use a single column without an empty image row.
 - **Navigation:** opening the mobile menu focuses its first link. Escape closes it and returns focus to the toggle; outside pointer actions and navigation close it. Collapse is enabled only after handlers bind, so navigation remains visible when JavaScript is unavailable.
 - **Publication filters:** topic, year and text search combine. Search matches words in titles, authors, journals and DOIs. `q`, `year` and `topic` are read from and reflected in the URL without adding a history entry for each keystroke; invalid year/topic values fall back to All. Result counts, zero results and Reset filters are provided. Without JavaScript, all selected papers remain readable.
 - **Citations:** expand/copy individual BibTeX entries or download the complete bibliography. Success is shown only after the clipboard promise succeeds. Failed or unavailable clipboard access selects the citation for manual copying and shows a failure message. Buttons are disabled while a request is pending.
@@ -42,12 +42,12 @@ These official guides inform the design for researchers, prospective students an
 
 | Official guide | Verification criterion |
 | --- | --- |
-| [2026 Web Design Trends](https://www.figma.com/resource-library/web-design-trends/) | The first view communicates the group's subject and gives clear research/publication paths. Large type, contrast and geometric depth support that purpose; motion preserves reading and loading performance. |
+| [2026 Web Design Trends](https://www.figma.com/resource-library/web-design-trends/) | The first view communicates the group's subject and gives clear research/publication paths. Large type, contrast and geometric structure support that purpose; motion preserves reading and loading performance. |
 | [Typography in Design](https://www.figma.com/resource-library/typography-in-design/) | Use consistent heading/body/metadata roles. Inspect long titles and paragraph widths; Figma suggests roughly 40–60 characters for English body text and more leading for longer lines. Do not apply heading line-height mechanically to paragraphs. |
 | [Web Design Grid Layout Examples](https://www.figma.com/resource-library/web-design-grid-layout-examples/) | Check common content edges, spacing and gutters across overview/detail pages. Repeated components follow shared spacing; layouts adapt rather than forcing a rigid print grid. |
 | [Responsive Website Design](https://www.figma.com/resource-library/responsive-website-design/) | Test 320, 390, 768 and 1280px widths and 200% zoom: no clipped content, unusable navigation or page-wide overflow. Check long DOI/email strings, SVG and scrollable BibTeX. These viewport choices are project checks. |
 | [Website Structure](https://www.figma.com/resource-library/website-structure/) | Verify concise navigation, current-page markers, research-to-paper links and paths to people/contact. Check internal links and not-found recovery. |
-| [Color Contrast Checker](https://www.figma.com/color-contrast-checker/) | Measure actual colours in both themes, including metadata, controls, selected/hover/focus states and hero captions. The guide gives AA thresholds of 4.5:1 for normal text and 3:1 for large text; contrast alone does not establish full accessibility. |
+| [Color Contrast Checker](https://www.figma.com/color-contrast-checker/) | Measure actual colours in the light palette, including metadata, controls, selected/hover/focus states and hero captions. The guide gives AA thresholds of 4.5:1 for normal text and 3:1 for large text; contrast alone does not establish full accessibility. |
 | [Button States](https://www.figma.com/resource-library/button-states/) | Check default/hover/active/focus/disabled states with keyboard and touch. Preserve focus visibility and truthful copy feedback; verify counts, zero results and reset. The guide's 44×44px mobile target and 100–200ms transition advice are design recommendations. |
 | [Mobile-first Design](https://www.figma.com/resource-library/mobile-first-design/) | Test actual small-screen devices and constrained connectivity. Measure initial requests, font/image transfer and common-asset caching before/after added effects. Minimize unnecessary assets and third-party scripts. |
 
@@ -81,7 +81,7 @@ Members may have `photo` and `url`; alumni use the same profile fields. Empty `a
 
 Research wording and faculty background follow [KENTECH Introduction](https://kentech.ac.kr/submenu.do?menuurl=JPQbgLY0JlNRZPvKXFeixQ%3D%3D&siteName=hjkim), [Academics](https://kentech.ac.kr/submenu.do?menuurl=yar34NkQy16gucKYFAFqrw%3D%3D&siteName=hjkim) and the [official publication list](https://kentech.ac.kr/submenu.do?menuurl=EmPii7OvsAgMn8WvyAXCLg%3D%3D&siteName=hjkim). Selected-paper metadata was checked against publisher/Crossref records. The current portrait was supplied by the user on 8 October 2026 and edited with the built-in image-generation tool to remove the distracting background and adjacent person. These records do not establish the current status of unlisted projects or latest lab achievements.
 
-The contact email and working DeepMathLab name come from the user. The known roster is incomplete. `preview: true` keeps generated pages `noindex,nofollow`; set it to false when content is ready for public indexing.
+The contact email and working DeepMathLab name come from the user. The known roster is incomplete. `preview: false` enables indexing of public content. The 404 page remains `noindex,follow`. The creator credit is a small English line in the shared footer.
 
 International benchmarks informed information architecture, not research claims or group scale:
 
@@ -91,8 +91,17 @@ International benchmarks informed information architecture, not research claims 
 - [Cambridge Machine Learning Group](https://mlg.eng.cam.ac.uk/): research themes linked to papers, role-based people/former members and degree enquiries.
 - [MPI Perceiving Systems](https://is.mpg.de/ps): research department; projects, publications, code/data and visitors/alumni.
 
-Reference-site wording, logos, template code and staff records are not copied. The white/charcoal/blue system, conceptual geometry and monogram are site assets; the faculty photograph is separately sourced as above.
+Reference-site wording, logos, template code and staff records are not copied. The white/charcoal/blue system and monogram are site assets; the faculty photograph is separately sourced as above.
 
 ## Sharing
 
 `share-card.svg` is the editable artwork; `share-card.png` is its 1200×630 export. Pages use it for Open Graph and Twitter previews. Update `ASSET_VERSION` in `build.py` after presentation/share-art changes. Kakao may retain previous previews; `home.html` provides a separate sharing URL. Its `og:url` matches its address because [Kakao may scrape the `og:url` destination](https://devtalk.kakao.com/t/og-url/136380). Deployment alone does not verify a changed Kakao preview.
+
+
+## Version control and indexing
+
+The current release is **1.1.0**. Keep editable sources and generated pages together in Git; [CHANGELOG.md](CHANGELOG.md) records user-visible releases. Run `python3 build.py` before publishing changes.
+
+The build generates `sitemap.xml` with the six canonical content pages and `robots.txt` with its public location. `home.html` is a sharing alias and canonicalizes to the root; it and the 404 page are omitted from the sitemap. `updated_on` supplies the sitemap modification date and should change when content changes.
+
+`google318d5d528899d7bd.html` is the public Google Search Console verification file for the laboratory account. Preserve it after verification. Submit `https://deepmathlab.github.io/sitemap.xml` and request the homepage's indexing in that account's URL-prefix property. Search-engine submission is not a guarantee of immediate visibility in search results.

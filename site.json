@@ -1,5 +1,5 @@
 {
-  "preview": true,
+  "preview": false,
   "default_language": "en",
   "verified_on": "2026-10-07",
   "email": "hjkentech@outlook.kr",
@@ -25,13 +25,11 @@
     "contact": "Contact"
   },
   "copy": {
-    "preview": "WEBSITE CONCEPT",
     "hero_title": "Mathematical structure.<br><span>Computational methods.</span>",
     "hero_subtitle": "Computational Mathematics & Scientific Computing",
     "hero_intro": "We develop numerical methods for differential equations and computational mechanics, with a focus on geometric singularities and fractional-order models.",
     "hero_cta": "Our research",
     "hero_secondary": "Selected work",
-    "figure_caption": "A study in geometry and approximation · conceptual illustration",
     "hero_strip": "Geometry & singularities / Fractional equations / Computational mechanics",
     "research_heading": "Three connected<br>research directions.",
     "research_intro": "From geometric representation to numerical approximation, our work studies how mathematical structure shapes computation.",
@@ -61,7 +59,6 @@
     "location": "KENTECH\nNaju, Jeollanam-do\nRepublic of Korea",
     "institution_link": "Visit KENTECH",
     "back_top": "Back to top",
-    "footer_note": "Website draft · Group directory and project materials are being updated.",
     "skip": "Skip to main content",
     "menu": "Open navigation",
     "hero_affiliation": "A research group led by",
@@ -110,16 +107,6 @@
     "resources_intro": "Public research tools, datasets, and learning materials from the group.",
     "news_title": "News & events.",
     "news_intro": "Updates from the group’s research and academic activities.",
-    "theme_label": "Theme",
-    "theme_to_dark": "Switch to dark theme",
-    "theme_to_light": "Switch to light theme",
-    "geometry_controls": "Explore the conceptual geometry",
-    "geometry_surface": "Surface",
-    "geometry_mesh": "Mesh",
-    "geometry_domain": "Domain",
-    "geometry_surface_desc": "A conceptual surface above its parameter domain.",
-    "geometry_mesh_desc": "A parameter lattice describes the surface geometry.",
-    "geometry_domain_desc": "The parameter domain before mapping to the surface.",
     "all_topics": "All topics",
     "topic_fractional": "Fractional equations",
     "topic_geometry": "Geometric methods",
@@ -131,7 +118,8 @@
     "group_panel_title": "Hyunju Kim<br><span>Research Group</span>",
     "group_panel_location": "Naju, Republic of Korea",
     "group_panel_research": "Computational mathematics<br>Scientific computing",
-    "footer_navigation": "Explore the lab"
+    "footer_navigation": "Explore the lab",
+    "creator_credit": "Created by Donghyeok Kim."
   },
   "research": [
     {
@@ -295,5 +283,7 @@
     "https://asl.ethz.ch/",
     "https://mlg.eng.cam.ac.uk/",
     "https://is.mpg.de/ps"
-  ]
+  ],
+  "site_version": "1.1.0",
+  "updated_on": "2026-10-08"
 }
