@@ -1,10 +1,10 @@
-# DeepMathLab
+# DEEP-MATH Lab
 
-English-only static website for Hyunju Kim's computational mathematics research group at KENTECH. The public origin is [deepmathlab.github.io](https://deepmathlab.github.io/). DeepMathLab is the working name supplied by the user; its official spelling and final content still need review.
+English-only static website for DEEP-MATH Lab, led by Hyunju Kim at KENTECH. The public origin is [deepmathlab.github.io](https://deepmathlab.github.io/). DEEP-MATH expands to Deep-learning Engineering and Explanatory Principles in Mathematics, following the professor's 2025 lab introduction.
 
 ## Build and pages
 
-Edit `site.json` for English copy, people, research themes, publications and optional material. Run from the repository root:
+Edit `site.json` for English copy, people, research axes, numerical foundations, publications and optional material. Run from the repository root:
 
 ```sh
 python3 build.py
@@ -16,7 +16,7 @@ The current build produces eight HTML files:
 | File | Purpose |
 | --- | --- |
 | `index.html` | Main overview; canonical is the public root URL |
-| `research.html` | Research themes and related papers |
+| `research.html` | Research axes, numerical foundations and related papers |
 | `people.html` | Faculty and the currently supplied group directory |
 | `publications.html` | Selected papers, filters and citations |
 | `join.html` | Research and visitor enquiries |
@@ -75,13 +75,13 @@ Suggested image sizes are 1600px wide for a group photograph, 600px on the short
 {"src":"./group-photo.jpg","alt":"Group photograph at KENTECH","caption":"Group photograph, October 2026"}
 ```
 
-Members may have `photo` and `url`; alumni use the same profile fields. Empty `alumni`, `resources` and `news` collections are not shown. Resources use `type`, `title`, `description`, `url`; news uses `date`, `title`, `summary`, `url`. Adding real entries enables their English pages and navigation, so the eight-file count increases. Do not add fictional projects, announcements, openings, staff or counts to fill space.
+Members may have `photo`, intrinsic `photo_width`/`photo_height`, `research_interests`, public `email`, `url` and `url_label`; alumni use the same profile fields. Empty `alumni`, `resources` and `news` collections are not shown. Resources use `type`, `title`, `description`, `url`; news uses `date`, `title`, `summary`, `url`. Adding real entries enables their English pages and navigation, so the eight-file count increases. Do not add fictional projects, announcements, openings, staff or counts to fill space.
 
 ## Source and reference boundaries
 
 Research wording and faculty background follow [KENTECH Introduction](https://kentech.ac.kr/submenu.do?menuurl=JPQbgLY0JlNRZPvKXFeixQ%3D%3D&siteName=hjkim), [Academics](https://kentech.ac.kr/submenu.do?menuurl=yar34NkQy16gucKYFAFqrw%3D%3D&siteName=hjkim) and the [official publication list](https://kentech.ac.kr/submenu.do?menuurl=EmPii7OvsAgMn8WvyAXCLg%3D%3D&siteName=hjkim). Selected-paper metadata was checked against publisher/Crossref records. The current portrait was supplied by the user on 8 October 2026 and edited with the built-in image-generation tool to remove the distracting background and adjacent person. These records do not establish the current status of unlisted projects or latest lab achievements.
 
-The contact email and working DeepMathLab name come from the user. The known roster is incomplete. `preview: false` enables indexing of public content. The 404 page remains `noindex,follow`. The creator credit is a small English line in the shared footer.
+The lab contact email comes from the user. The DEEP-MATH name and three research axes follow the professor-supplied 2025 introduction. The professor's latest website direction defines the lab as a mathematical foundation and research hub for AI, hydrogen, batteries, power grids and nuclear research. These fields describe its research role rather than a list of claimed experimental projects. `preview: false` enables indexing of public content. The 404 page remains `noindex,follow`. The creator credit is a small English line in the shared footer.
 
 International benchmarks informed information architecture, not research claims or group scale:
 
@@ -100,8 +100,34 @@ Reference-site wording, logos, template code and staff records are not copied. T
 
 ## Version control and indexing
 
-The current release is **1.1.0**. Keep editable sources and generated pages together in Git; [CHANGELOG.md](CHANGELOG.md) records user-visible releases. Run `python3 build.py` before publishing changes.
+The current release is **1.2.0**. The `site_version` value also supplies the asset cache version. Keep editable sources and generated pages together in Git; [CHANGELOG.md](CHANGELOG.md) records user-visible releases. Run `python3 build.py` before publishing changes.
 
 The build generates `sitemap.xml` with the six canonical content pages and `robots.txt` with its public location. `home.html` is a sharing alias and canonicalizes to the root; it and the 404 page are omitted from the sitemap. `updated_on` supplies the sitemap modification date and should change when content changes.
 
 `google318d5d528899d7bd.html` is the public Google Search Console verification file for the laboratory account. Preserve it after verification. Submit `https://deepmathlab.github.io/sitemap.xml` and request the homepage's indexing in that account's URL-prefix property. Search-engine submission is not a guarantee of immediate visibility in search results.
+
+
+## Current introduction and member profiles
+
+The homepage uses the three axes in the professor's 2025 introduction: Mathematics for AI, AI for Mathematics, and Mathematical Simulation, Analysis, and Modeling. `research_axes` supplies these summaries. The existing `research` array retains the specific numerical foundations and DOI relationships, including stable links for geometry, fractional equations and mechanics. No unverified AI paper or application project is added to the bibliography.
+
+Hansu Kim, Soobeen Jung and Hwanseo Lee supplied their names, roles, research interests, public email addresses and photographs in replies to the website-profile request on 8 October 2026. Hansu also supplied a GitHub link. Their photo files are web exports of the supplied originals, with metadata removed and no generated facial changes. Original correspondence and source photographs are kept outside the public repository.
+
+The hero remains without an illustration. Social sharing uses a flat typographic lab card, with the lab's five research connections and no personal photograph.
+
+
+## Research imagery and information structure
+
+The 1.2.0 update revisits each of the eight official Figma guides in the crosswalk above. The main introduction keeps the representative-image area open. Three research axes use a title, one sentence, method keywords and an original research example. The lab's shared foundation and five research connections are drawn as a two-level HTML diagram with readable labels. This describes the professor's mission scope, not a matrix of active projects.
+
+Three images come from the professor-supplied 2025 introduction:
+
+| Source inside PPTX | Website example | Interpretation |
+| --- | --- | --- |
+| `ppt/media/image61.png` | `research-initialization` | PINN training loss for a Burgers-equation example under different initialization settings |
+| `ppt/media/image14.png` | `research-helmholtz` | A Helmholtz approximation on a curved geometry using isogeometric collocation and a neural network |
+| `ppt/media/image68.png` | `research-phase-field` | A phase-field pattern on a circular domain; no time or fractional order is inferred |
+
+Each PNG is an unchanged copy of the embedded source image. WebP previews preserve image proportions, axes, legends and color scales. HTML captions name the example and its source. A full-size link opens the source PNG in a new tab. No performance comparison, model parameter or publication DOI is inferred from these images.
+
+Research overviews show Focus, Methods and Example. Dense numerical foundations use native disclosure rows, retaining their descriptions and related papers. Existing fragment links open the relevant row. The disclosures remain usable without JavaScript. Sources, full-size links, intrinsic image sizes, alt text and link focus states are checked separately from image appearance. Browser viewport checks do not certify real-device performance or full accessibility compliance.

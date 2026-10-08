@@ -28,6 +28,17 @@ if (menu && navigation) {
   root.classList.add("navigation-ready");
 }
 
+// Native details remain usable without JavaScript; existing deep links open their section.
+function openLinkedFoundation() {
+  let targetId;
+  try { targetId = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+  const target = targetId ? document.getElementById(targetId) : null;
+  const details = target?.closest('details.research-foundation');
+  if (details) details.open = true;
+}
+openLinkedFoundation();
+window.addEventListener('hashchange', openLinkedFoundation);
+
 const search = document.querySelector("#publication-search");
 const year = document.querySelector("#publication-year");
 const empty = document.querySelector(".no-results");

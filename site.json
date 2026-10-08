@@ -14,9 +14,9 @@
     "https://kentech.ac.kr/submenu.do?menuurl=EmPii7OvsAgMn8WvyAXCLg%3D%3D&siteName=hjkim",
     "https://kentech.ac.kr/submenu.do?menuurl=yar34NkQy16gucKYFAFqrw%3D%3D&siteName=hjkim"
   ],
-  "brand": "DeepMathLab",
+  "brand": "DEEP-MATH Lab",
   "brand_sub": "HYUNJU KIM · KENTECH",
-  "brand_source": "Working website label based on the lab GitHub account DeepMathLab supplied by the user; official spelling pending review",
+  "brand_source": "Lab name and expansion from the professor-supplied DEEP-MATH research introduction, 2025.",
   "nav": {
     "research": "Research",
     "people": "People",
@@ -25,25 +25,25 @@
     "contact": "Contact"
   },
   "copy": {
-    "hero_title": "Mathematical structure.<br><span>Computational methods.</span>",
-    "hero_subtitle": "Computational Mathematics & Scientific Computing",
-    "hero_intro": "We develop numerical methods for differential equations and computational mechanics, with a focus on geometric singularities and fractional-order models.",
+    "hero_title": "Mathematical foundations.<br><span>For AI and energy.</span>",
+    "hero_subtitle": "Mathematical analysis and computational methods",
+    "hero_intro": "We provide mathematical foundations and serve as a research hub for AI, hydrogen, batteries, power grids, and nuclear research.",
     "hero_cta": "Our research",
     "hero_secondary": "Selected work",
-    "hero_strip": "Geometry & singularities / Fractional equations / Computational mechanics",
+    "hero_strip": "AI / Hydrogen / Batteries / Power grids / Nuclear research",
     "research_heading": "Three connected<br>research directions.",
-    "research_intro": "From geometric representation to numerical approximation, our work studies how mathematical structure shapes computation.",
+    "research_intro": "Our work connects the mathematical analysis of deep learning with learning methods for differential equations and the simulation of physical systems.",
     "people_heading": "The research group.",
     "pi_label": "FACULTY / GROUP LEAD",
     "pi_name": "Hyunju Kim",
     "pi_role": "Associate Professor",
     "pi_department": "Department of Energy Engineering\nKorea Institute of Energy Technology",
-    "pi_description": "Hyunju Kim is an Associate Professor at KENTECH working in computational applied mathematics. Research interests include isogeometric analysis, generalized finite element methods, and numerical algorithms for fractional differential equations.",
+    "pi_description": "Hyunju Kim leads DEEP-MATH Lab at KENTECH. The group’s work connects the mathematical analysis of deep learning, physics-informed machine learning, and computational applied mathematics, including isogeometric analysis, generalized finite element methods, and fractional differential equations.",
     "profile_link": "Faculty profile & academic background",
     "members_label": "IN THE GROUP",
     "all_filter": "All",
     "undergraduate_filter": "Undergraduate",
-    "members_note": "Additional member profiles will be added as the group directory is updated.",
+    "members_note": "",
     "publications_heading": "Selected<br>publications.",
     "publications_intro": "Published work in numerical analysis, geometric approximation, and fractional differential equations.",
     "publications_source": "Official publication list",
@@ -53,7 +53,7 @@
     "filter_year_label": "Publication year",
     "no_results": "No matching publications. Adjust the topic, year, or search terms, or reset the filters.",
     "contact_heading": "Research &<br>collaboration.",
-    "contact_intro": "For enquiries about our research or potential collaborations, please contact the group.",
+    "contact_intro": "For research and collaboration across AI and energy, contact DEEP-MATH Lab at KENTECH.",
     "email_label": "LAB EMAIL",
     "location_label": "LOCATION",
     "location": "KENTECH\nNaju, Jeollanam-do\nRepublic of Korea",
@@ -66,9 +66,9 @@
     "pi_education": "Ph.D., Mathematics and Statistics · University of North Carolina at Charlotte, 2013",
     "education_label": "BACKGROUND",
     "hero_department": "Energy Engineering",
-    "about_heading": "A mathematical perspective<br>on scientific computation.",
-    "about_intro": "DeepMathLab is a computational mathematics research group at KENTECH, led by Hyunju Kim. We study the relationship between the structure of differential equations and the numerical methods used to solve them.",
-    "about_detail": "Our interests connect geometric approximation, fractional-order equations, and computational mechanics. This website brings together the group’s research themes, people, and selected published work.",
+    "about_heading": "A common foundation<br>for connected research.",
+    "about_intro": "DEEP-MATH Lab is led by Hyunju Kim at KENTECH. We bring mathematical analysis, computational methods, and scientific machine learning into AI and energy research.",
+    "about_detail": "DEEP-MATH stands for Deep-learning Engineering and Explanatory Principles in Mathematics.",
     "all_research": "Explore all research themes",
     "all_people": "Meet the group",
     "all_publications": "View selected bibliography",
@@ -78,18 +78,18 @@
     "methods_label": "METHODS",
     "problems_label": "PROBLEM CLASSES",
     "related_papers": "Related publications",
-    "research_context": "Research themes are based on the faculty’s public research profile.",
-    "page_research_title": "Research themes.",
-    "page_research_intro": "Numerical analysis, geometric approximation, and differential equations form the foundation of our work in scientific computing.",
+    "research_context": "The lab connects the mathematics of learning, learning methods for mathematical problems, and numerical modeling. Our selected publications document the foundations in differential equations and numerical analysis.",
+    "page_research_title": "Research foundations.",
+    "page_research_intro": "We develop the mathematics and computational methods that support research across AI, hydrogen, batteries, power grids, and nuclear research.",
     "page_people_title": "The research group.",
-    "page_people_intro": "Faculty and researchers working together in computational mathematics at KENTECH.",
+    "page_people_intro": "Meet the faculty and researchers working on the mathematical foundations of AI and energy research at KENTECH.",
     "page_publications_title": "Publications.",
     "page_publications_intro": "Selected published papers spanning fractional differential equations, isogeometric analysis, and methods for singular problems.",
     "bibtex_download": "Download bibliography (.bib)",
     "page_join_title": "Join & collaborate.",
-    "page_join_intro": "Interested in computational mathematics? Contact the group about research study, collaboration, or a possible visit.",
+    "page_join_intro": "Contact the group about research study, collaboration, or a visit involving the mathematical and computational foundations of AI and energy.",
     "join_heading": "Research begins<br>with a conversation.",
-    "join_home_intro": "Find the right route for research enquiries, graduate study, or collaboration.",
+    "join_home_intro": "Discuss a mathematical or computational question in AI, hydrogen, batteries, power grids, or nuclear research with the group.",
     "join_link": "Research enquiries & visits",
     "join_prepare": "What to include in an enquiry",
     "join_status": "Available supervision, visiting arrangements, and any open positions are confirmed directly with the group. Formal degree admissions are handled by KENTECH.",
@@ -101,7 +101,7 @@
     "campus_label": "CAMPUS ADDRESS",
     "visit_note": "Please contact the group before arranging a visit. Building and room details can be confirmed by email.",
     "faculty_label": "Faculty",
-    "current_members": "Current researchers",
+    "current_members": "Group members",
     "alumni_heading": "Alumni",
     "resources_title": "Software & resources.",
     "resources_intro": "Public research tools, datasets, and learning materials from the group.",
@@ -117,9 +117,23 @@
     "copy_failed": "Copy unavailable. Select the citation text below.",
     "group_panel_title": "Hyunju Kim<br><span>Research Group</span>",
     "group_panel_location": "Naju, Republic of Korea",
-    "group_panel_research": "Computational mathematics<br>Scientific computing",
+    "group_panel_research": "Mathematical modeling<br>Numerical methods<br>Scientific machine learning",
     "footer_navigation": "Explore the lab",
-    "creator_credit": "Created by Donghyeok Kim."
+    "creator_credit": "Created by Donghyeok Kim.",
+    "research_connections_title": "Research connections",
+    "research_connections_intro": "We connect fundamental mathematics with questions across these fields through mathematical modeling, numerical analysis, and scientific machine learning.",
+    "numerical_foundations_heading": "Numerical research foundations",
+    "member_research_label": "Research interests",
+    "member_website_label": "Personal website",
+    "footer_tagline": "Mathematical foundations for AI and energy",
+    "foundation_label": "SHARED MATHEMATICAL FOUNDATION",
+    "foundation_title": "Mathematics connects the fields.",
+    "foundation_source": "Mathematical analysis / Learning methods / Simulation & modeling",
+    "research_method_label": "Methods",
+    "research_focus_label": "Focus",
+    "view_figure": "View full-size figure",
+    "figure_source_label": "Source",
+    "foundation_intro": "Our mathematical and computational methods provide a shared foundation for research across these fields."
   },
   "research": [
     {
@@ -182,6 +196,53 @@
       "detail": "KENTECH · Senior",
       "category": "undergraduate",
       "source": "User-provided AGENTS.md instructions, 2026-10-07"
+    },
+    {
+      "name": "Hansu Kim",
+      "initials": "HK",
+      "role": "Undergraduate Researcher",
+      "detail": "Department of Energy Engineering · KENTECH",
+      "research_interests": [
+        "Neural network initialization theory",
+        "Language model compression and efficiency",
+        "Fractional differential equations"
+      ],
+      "email": "kimhansu1206@kentech.ac.kr",
+      "photo": "./hansu-kim.webp",
+      "photo_width": 472,
+      "photo_height": 472,
+      "url": "https://github.com/CheongJea",
+      "url_label": "GitHub"
+    },
+    {
+      "name": "Soobeen Jung",
+      "initials": "SJ",
+      "role": "Undergraduate Researcher",
+      "detail": "Department of Energy Engineering · KENTECH · Senior",
+      "research_interests": [
+        "Inverse problems",
+        "Physics-informed neural networks (PINNs)"
+      ],
+      "email": "sbeenjung@kentech.ac.kr",
+      "photo": "./soobeen-jung.webp",
+      "photo_width": 600,
+      "photo_height": 701,
+      "url": null
+    },
+    {
+      "name": "Hwanseo Lee",
+      "initials": "HL",
+      "role": "Undergraduate Student",
+      "detail": "Department of Energy Engineering · KENTECH · Junior",
+      "research_interests": [
+        "Fractional derivatives and optimization"
+      ],
+      "email": "hwanbrother@kentech.ac.kr",
+      "photo": "./hwanseo-lee.webp",
+      "photo_width": 600,
+      "photo_height": 992,
+      "photo_fit": "contain",
+      "url": null
     }
   ],
   "publications": [
@@ -284,6 +345,92 @@
     "https://mlg.eng.cam.ac.uk/",
     "https://is.mpg.de/ps"
   ],
-  "site_version": "1.1.0",
-  "updated_on": "2026-10-08"
+  "site_version": "1.2.0",
+  "updated_on": "2026-10-08",
+  "brand_full_name": "Deep-learning Engineering and Explanatory Principles in Mathematics",
+  "site_description": "Mathematical foundations and a research hub for AI, hydrogen, batteries, power grids, and nuclear research at KENTECH, led by Hyunju Kim.",
+  "application_areas": [
+    "AI",
+    "Hydrogen",
+    "Batteries",
+    "Power grids",
+    "Nuclear research"
+  ],
+  "research_axes": [
+    {
+      "id": "mathematics-for-ai",
+      "number": "01",
+      "title": "Mathematics for AI",
+      "subtitle": "Understanding how learning works.",
+      "description": "Mathematical analysis of deep learning, including weight initialization, signal propagation, and knowledge distillation.",
+      "tags": [
+        "Weight initialization",
+        "Knowledge distillation",
+        "Efficient learning"
+      ],
+      "scope": "Deep neural networks; gradient and signal propagation; model compression.",
+      "detail": "We study the mathematical structure of neural networks and the choices that affect their training and efficiency. Topics include initialization, the propagation of information through deep networks, and the transfer of knowledge between models.",
+      "figure": {
+        "src": "./research-initialization.webp",
+        "width": 1200,
+        "height": 503,
+        "original": "./research-initialization.png",
+        "title": "Initialization and learning",
+        "alt": "Two loss-versus-iteration plots comparing initialization settings for PINNs solving the Burgers equation.",
+        "caption": "PINN training loss for the Burgers equation under different initialization settings.",
+        "source": "Lab research introduction, 2025",
+        "ppt_media": "ppt/media/image61.png"
+      }
+    },
+    {
+      "id": "ai-for-mathematics",
+      "number": "02",
+      "title": "AI for Mathematics",
+      "subtitle": "Learning methods for mathematical problems.",
+      "description": "Physics-informed machine learning and deep numerical methods that combine neural networks with differential equations and numerical analysis.",
+      "tags": [
+        "Physics-informed learning",
+        "Deep numerical methods",
+        "Inverse problems"
+      ],
+      "scope": "Differential equations; inverse problems; learning with physical constraints and observations.",
+      "detail": "We combine learning methods with equations, boundary conditions, and numerical discretization. Topics include physics-informed neural networks, neural methods coupled with isogeometric collocation, and inference from observed data.",
+      "figure": {
+        "src": "./research-helmholtz.webp",
+        "width": 1200,
+        "height": 1192,
+        "original": "./research-helmholtz.png",
+        "title": "Neural networks and numerical approximation",
+        "alt": "Approximate Helmholtz solution plotted on a curved geometry with x and y coordinates.",
+        "caption": "Helmholtz approximation using isogeometric collocation combined with a neural network.",
+        "source": "Lab research introduction, 2025",
+        "ppt_media": "ppt/media/image14.png"
+      }
+    },
+    {
+      "id": "simulation-modeling",
+      "number": "03",
+      "title": "Simulation, Analysis & Modeling",
+      "subtitle": "Computing with mathematical and physical models.",
+      "description": "Mathematical models and numerical methods for physical systems, including fluid flow, heat transfer, phase-field models, and fractional dynamics.",
+      "tags": [
+        "Numerical analysis",
+        "Mathematical modeling",
+        "Fractional dynamics & optimization"
+      ],
+      "scope": "Partial differential equations; fluid flow and heat transfer; geometric singularities; fractional dynamical systems and optimization.",
+      "detail": "Our numerical work studies how to represent, analyze, and approximate mathematical models. Geometry, physical constraints, and the behavior of the solution guide the construction of computational methods.",
+      "figure": {
+        "src": "./research-phase-field.webp",
+        "width": 1200,
+        "height": 1137,
+        "original": "./research-phase-field.png",
+        "title": "Phase-field modeling",
+        "alt": "Phase-field pattern on a circular domain, shown with coordinate axes and a color scale.",
+        "caption": "Phase-field modeling on a circular domain.",
+        "source": "Lab research introduction, 2025",
+        "ppt_media": "ppt/media/image68.png"
+      }
+    }
+  ]
 }
