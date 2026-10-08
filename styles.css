@@ -135,7 +135,7 @@ h2 { margin: 0; font-family: var(--display); font-size: clamp(31px, 3vw, 39px); 
 .section-aside { color: var(--muted); font-family: var(--mono); font-size: 12px; line-height: 1.9; letter-spacing: .04em; text-align: right; }
 .pi-profile { display: grid; grid-template-columns: 174px minmax(0, 1fr); align-items: start; gap: 62px; max-width: 1020px; margin-top: 8px; }
 .pi-portrait { width: 174px; max-width: 100%; margin: 0; }
-.pi-portrait img { display: block; width: 100%; height: auto; border: 1px solid var(--line); filter: saturate(.6); }
+.pi-portrait img { display: block; width: 100%; height: auto; background: #eef1f5; border: 1px solid var(--line); }
 .pi-portrait figcaption { margin-top: 11px; color: var(--muted); font-family: var(--mono); font-size: 12px; line-height: 1.8; }
 .pi-text { min-width: 0; }
 .pi-text > .eyebrow { margin-bottom: 11px; }

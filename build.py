@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build an English-first bilingual research website with Python's standard library."""
+"""Build an English-only research website with Python's standard library."""
 import html
 import json
 import re
@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / 'site.json').read_text(encoding='utf-8'))
 PUBLIC_ORIGIN = 'https://deepmathlab.github.io/'
-ASSET_VERSION = '20261008-v2'
+ASSET_VERSION = '20261008-v3'
 SHARE_IMAGE = PUBLIC_ORIGIN + 'share-card.png?v=' + ASSET_VERSION
 FONT_STYLESHEET = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap'
 THEME_INIT = """<script>(function(){var theme='light';try{var saved=localStorage.getItem('deepmathlab-theme');theme=saved==='light'||saved==='dark'?saved:(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}catch(e){theme=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=theme;document.documentElement.classList.add('js');})();</script>"""
@@ -106,7 +106,7 @@ def render(page='home', page_path=None):
       <div class="research-card-top"><svg class="research-symbol" viewBox="0 0 64 56" aria-hidden="true">{SYMBOLS[item['id']]}</svg><span class="item-number">{esc(item['number'])}</span></div>
       <div class="research-titles"><h3 class="research-title"><a href="{r('research')}#{esc(item['id'])}">{t(item['title'])}</a></h3><p class="research-subtitle">{t(item['subtitle'])}</p></div>
       <div class="research-detail"><p>{t(item['description'])}</p><div class="tags">{''.join(f'<span>{esc(tag)}</span>' for tag in item['tags'])}</div></div></article>''' for item in DATA['research'])
-    pi = f'''<article class="pi-profile" id="hyunju-kim"><figure class="pi-portrait"><img src="./hyunju-kim.jpg" width="123" height="148" alt="{c('pi_name')}" loading="lazy"><figcaption>KENTECH · HYUNJU KIM</figcaption></figure>
+    pi = f'''<article class="pi-profile" id="hyunju-kim"><figure class="pi-portrait"><img src="./hyunju-kim-portrait.webp" width="640" height="800" alt="{c('pi_name')}" loading="lazy" decoding="async"><figcaption>KENTECH · HYUNJU KIM</figcaption></figure>
       <div class="pi-text"><p class="eyebrow">{c('pi_label')}</p><h3>{c('pi_name')}</h3><p class="pi-role">{c('pi_role')}</p><p class="pi-department">{c('pi_department')}</p><p class="pi-description">{c('pi_description')}</p><p class="pi-education"><span>{c('education_label')}</span>{c('pi_education')}</p>{link(c('profile_link'), DATA['academic_url'])}</div></article>'''
     join_cards = ''.join(f'<article class="join-card"><p class="eyebrow">0{i+1}</p><h2>{t(item["title"])}</h2><p>{t(item["description"])}</p></article>' for i, item in enumerate(DATA['join_paths']))
     title = 'DeepMathLab | Computational Mathematics | KENTECH' if lang == 'en' else 'DeepMathLab | 김현주 교수 연구실 | KENTECH'
