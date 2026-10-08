@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.0 — 2026-10-09
+
+- Replace small homepage plots with three original, labeled conceptual method diagrams; retain source research figures and full-size originals on Research.
+- Rebuild Research around questions, methods and explained examples, including a full-width two-panel initialization figure.
+- Give People a featured faculty profile, a compact member directory and direct homepage profile links.
+- Group selected publications by year and keep search, year/topic filters, empty states, DOI links and BibTeX working together.
+- Refine Join into three enquiry routes and preparation steps, and Contact into a clear lab email and campus information layout.
+- Self-host Inter, Manrope and IBM Plex Mono from a pinned official OFL distribution. Preserve all font data and metadata in WOFF packaging, include the original licenses and publish the asset license record.
+
 ## 1.3.0 — 2026-10-08
 
 - Refine the first screen around a large, two-line mathematical mission and one concise introduction.

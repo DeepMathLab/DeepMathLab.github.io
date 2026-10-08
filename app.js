@@ -78,6 +78,9 @@ if (search && year && empty && resultStatus && resetFilters) {
       item.hidden = !matches;
       if (matches) count++;
     });
+    document.querySelectorAll('[data-publication-group]').forEach(group => {
+      group.hidden = [...group.querySelectorAll('.publication')].every(item => item.hidden);
+    });
     topicButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.topicFilter === topic)));
     empty.hidden = count > 0;
     resultStatus.textContent = `${count} ${count === 1 ? "publication" : "publications"}`;

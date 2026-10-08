@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">From geometry to a numerical field</title>
+  <desc id="desc">Three conceptual stages of numerical modeling: represent a curved two-dimensional domain, discretize it with a geometry-aware grid, and approximate a field over the domain. The final contours are schematic level sets illustrating the type of mathematical object being computed; they do not encode measured data or a particular solved physical system.</desc>
+  <defs>
+    <path id="domain" d="M0 0H190V75A115 115 0 0 0 75 190H0Z"/>
+    <clipPath id="mesh-clip"><use href="#domain"/></clipPath>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="m2 1 6 4-6 4" fill="none" stroke="#365BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <g transform="translate(50 145)">
+    <use href="#domain" fill="#F7F8FC" stroke="#344155" stroke-width="2.2"/>
+    <g fill="#FFFFFF" stroke="#344155" stroke-width="1.8"><circle cx="0" cy="0" r="4.5"/><circle cx="190" cy="0" r="4.5"/><circle cx="190" cy="75" r="4.5"/><circle cx="75" cy="190" r="4.5"/><circle cx="0" cy="190" r="4.5"/></g>
+  </g>
+  <g transform="translate(305 145)">
+    <use href="#domain" fill="#F7F8FC"/>
+    <g clip-path="url(#mesh-clip)" fill="none" stroke="#365BFF" stroke-width="1.3">
+      <circle cx="190" cy="190" r="145"/><circle cx="190" cy="190" r="175"/><circle cx="190" cy="190" r="205"/><circle cx="190" cy="190" r="235"/><circle cx="190" cy="190" r="265"/>
+      <path d="M190 190-110 190M190 190-99.78 112.35M190 190-69.81 40M190 190-22.13-22.13M190 190 40-69.81M190 190 112.35-99.78M190 190 190-110"/>
+    </g>
+    <use href="#domain" fill="none" stroke="#344155" stroke-width="2.2"/>
+  </g>
+  <g transform="translate(560 145)">
+    <use href="#domain" fill="#F0F3FF"/>
+    <g clip-path="url(#mesh-clip)" fill="none" stroke="#365BFF" stroke-width="2.5">
+      <path d="M-20 36C37 18 73 32 108 14S179-8 218 10M-20 68C32 42 72 66 113 47S180 12 218 42M-20 107C30 67 66 95 112 79S174 46 218 78M-20 151C27 112 70 130 98 116S163 73 218 112M-20 197C24 165 65 169 91 159S145 113 218 151"/>
+    </g>
+    <use href="#domain" fill="none" stroke="#344155" stroke-width="2.2"/>
+  </g>
+  <g fill="none" stroke="#365BFF" stroke-width="2" stroke-linecap="round">
+    <path d="M261 238h23M516 238h23" marker-end="url(#arrow)"/>
+  </g>
+  <g fill="#1E2737" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" text-anchor="middle">
+    <text x="145" y="407">Geometry</text>
+    <text x="400" y="407">Discretization</text>
+    <text x="655" y="407">Field solution</text>
+  </g>
+</svg>

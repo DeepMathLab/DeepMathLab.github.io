@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Weight initialization and signal propagation</title>
+  <desc id="desc">Conceptual diagram of an input passing through two weighted neural-network layers to an output. A blue path highlights signal propagation, and an initialization bracket indicates the weights set before training. The nodes and connections illustrate a method, not a trained model or measured result.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="m1 1 5 3-5 3" fill="none" stroke="#365BFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <g fill="none" stroke="#D5DCE8" stroke-width="1.5">
+    <path d="M96 190 290 164M96 190 290 220M96 190 290 276M96 190 290 332M96 248 290 164M96 248 290 220M96 248 290 276M96 248 290 332M96 306 290 164M96 306 290 220M96 306 290 276M96 306 290 332"/>
+    <path d="M290 164 500 164M290 164 500 220M290 164 500 276M290 164 500 332M290 220 500 164M290 220 500 220M290 220 500 276M290 220 500 332M290 276 500 164M290 276 500 220M290 276 500 276M290 276 500 332M290 332 500 164M290 332 500 220M290 332 500 276M290 332 500 332"/>
+    <path d="M500 164 704 218M500 164 704 278M500 220 704 218M500 220 704 278M500 276 704 218M500 276 704 278M500 332 704 218M500 332 704 278"/>
+  </g>
+  <g fill="none" stroke="#365BFF" stroke-width="3" stroke-linecap="round">
+    <path d="m111 246 164-23M305 224l180 48M515 276l174 2" marker-end="url(#arrow)"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#344155" stroke-width="2">
+    <circle cx="96" cy="190" r="13"/><circle cx="96" cy="306" r="13"/>
+    <circle cx="290" cy="164" r="13"/><circle cx="290" cy="276" r="13"/><circle cx="290" cy="332" r="13"/>
+    <circle cx="500" cy="164" r="13"/><circle cx="500" cy="220" r="13"/><circle cx="500" cy="332" r="13"/>
+    <circle cx="704" cy="218" r="13"/>
+  </g>
+  <g fill="#365BFF" stroke="#FFFFFF" stroke-width="3">
+    <circle cx="96" cy="248" r="14"/><circle cx="290" cy="220" r="14"/><circle cx="500" cy="276" r="14"/><circle cx="704" cy="278" r="14"/>
+  </g>
+  <path d="M159 131v-18h482v18M400 113V99" fill="none" stroke="#365BFF" stroke-width="1.6"/>
+  <g fill="#1E2737" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" text-anchor="middle">
+    <text x="400" y="80" fill="#365BFF">Initialization</text>
+    <text x="96" y="407">Input</text>
+    <text x="395" y="407">Weighted layers</text>
+    <text x="704" y="407">Output</text>
+  </g>
+</svg>

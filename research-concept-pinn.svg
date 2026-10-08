@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Learning an approximation with physical constraints</title>
+  <desc id="desc">A conceptual physics-informed neural-network workflow. Coordinates enter a neural approximation. Its output and derivatives are evaluated against the differential equation and boundary conditions. These constraints guide updates to the approximation during training, shown by a feedback arrow. No equation, physical solution, or numerical result is being asserted.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="m2 1 6 4-6 4" fill="none" stroke="#365BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <g fill="none" stroke="#D5DCE8" stroke-width="1.5">
+    <circle cx="94" cy="240" r="48"/>
+    <path d="M30 240h128M94 176v128"/>
+  </g>
+  <circle cx="116" cy="217" r="7" fill="#365BFF"/>
+  <rect x="238" y="157" width="204" height="166" rx="9" fill="#F7F8FC" stroke="#D5DCE8" stroke-width="1.5"/>
+  <g fill="none" stroke="#BEC9DE" stroke-width="1.4">
+    <path d="M276 211 340 190M276 211 340 240M276 211 340 290M276 269 340 190M276 269 340 240M276 269 340 290M340 190 404 240M340 240 404 240M340 290 404 240"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#365BFF" stroke-width="2">
+    <circle cx="276" cy="211" r="9"/><circle cx="276" cy="269" r="9"/>
+    <circle cx="340" cy="190" r="9"/><circle cx="340" cy="240" r="9"/><circle cx="340" cy="290" r="9"/>
+  </g>
+  <circle cx="404" cy="240" r="10" fill="#365BFF"/>
+  <g fill="none" stroke="#365BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M160 240h59" marker-end="url(#arrow)"/>
+    <path d="M442 240h48M490 240v-49h55M490 240v67h55" marker-end="url(#arrow)"/>
+  </g>
+  <circle cx="490" cy="240" r="4" fill="#365BFF"/>
+  <g fill="#FFFFFF" stroke="#D5DCE8" stroke-width="1.5">
+    <rect x="565" y="145" width="205" height="90" rx="6"/>
+    <rect x="565" y="264" width="205" height="90" rx="6"/>
+  </g>
+  <path d="M769 190h15v199H340v-48" fill="none" stroke="#365BFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+  <path d="M769 309h15" fill="none" stroke="#365BFF" stroke-width="1.7"/>
+  <g fill="#1E2737" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="500" text-anchor="middle">
+    <text x="94" y="110">Coordinates</text>
+    <text x="340" y="110">Neural approximation</text>
+    <text x="667" y="200">PDE residual</text>
+    <text x="667" y="303"><tspan x="667">Boundary</tspan><tspan x="667" dy="31">constraints</tspan></text>
+  </g>
+</svg>

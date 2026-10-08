@@ -100,7 +100,7 @@ Reference-site wording, logos, template code and staff records are not copied. T
 
 ## Version control and indexing
 
-The current release is **1.3.0**. The `site_version` value also supplies the asset cache version. Keep editable sources and generated pages together in Git; [CHANGELOG.md](CHANGELOG.md) records user-visible releases. Run `python3 build.py` before publishing changes.
+The current release is **1.4.0**. The `site_version` value also supplies the asset cache version. Keep editable sources and generated pages together in Git; [CHANGELOG.md](CHANGELOG.md) records user-visible releases. Run `python3 build.py` before publishing changes.
 
 The build generates `sitemap.xml` with the six canonical content pages and `robots.txt` with its public location. `home.html` is a sharing alias and canonicalizes to the root; it and the 404 page are omitted from the sitemap. `updated_on` supplies the sitemap modification date and should change when content changes.
 
@@ -137,3 +137,11 @@ Research overviews show Focus, Methods and Example. Dense numerical foundations 
 Version 1.3.0 uses typography as the main visual: a full-width, two-line mission, a concise introduction, a primary Research action and a quiet Publications link. Five static field labels describe the lab’s scope without implying project counts or achievements. No representative image, gradient, animation or tracking dependency was added. Homepage research cards retain original examples and remove repetitive method tags; the Research page keeps the methods.
 
 The refinement revisits Figma’s [visual hierarchy](https://www.figma.com/resource-library/what-is-visual-hierarchy/), [typography](https://www.figma.com/resource-library/typography-in-design/) and [grid layouts](https://www.figma.com/resource-library/web-design-grid-layout-examples/). [Apple](https://www.apple.com/), [Google DeepMind About](https://deepmind.google/about/) and [IBM Research](https://research.ibm.com/) inform the emphasis on one first-screen message and clear exploration paths. Their logos, media, wording, claims and site code are not reused.
+
+## Purposeful pages and font distribution
+
+Version 1.4.0 separates conceptual explanations from research evidence. Home uses three original SVG method diagrams with explicit conceptual captions; Research preserves the original source examples, gives the two-panel loss plot a wide layout, and retains full-size PNG links. People uses a faculty feature and compact member directory. Publications groups the six selected papers by year and hides empty year groups when filters change. Join provides three enquiry subjects and preparation guidance; Contact prioritizes the shared lab email and distinguishes the campus address from an unverified office location.
+
+All three webfonts are served from `fonts/`, with `font-display: swap` and system fallbacks. The [asset license record](ASSET_LICENSES.md) links the full original SIL OFL 1.1 notices in `licenses/`. `build_fonts.py` retrieves SHA-256-pinned official Google/fonts binaries and packages WOFF 1.0 without changing any source font table. It independently decodes and compares every table, including copyright/license/name, glyph and variable-font tables. No Google Fonts stylesheet or external font requests remain. Run this font script only when deliberately rebuilding the font assets; normal page builds use the committed files.
+
+Font licensing review covers these exact assets and their distribution conditions; it is not a blanket license for member photographs or scientific figures. New concept diagrams are original SVG code, not computed results.

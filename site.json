@@ -44,9 +44,9 @@
     "all_filter": "All",
     "undergraduate_filter": "Undergraduate",
     "members_note": "",
-    "publications_heading": "Ideas, in print.",
+    "publications_heading": "Selected publications.",
     "publications_intro": "Selected publications in numerical analysis, geometric approximation and fractional differential equations.",
-    "publications_source": "Official publication list",
+    "publications_source": "Faculty publication list",
     "search_placeholder": "Search titles, authors, or journals",
     "search_label": "Search publications",
     "filter_all_years": "All years",
@@ -66,8 +66,8 @@
     "pi_education": "Ph.D., Mathematics and Statistics · University of North Carolina at Charlotte, 2013",
     "education_label": "BACKGROUND",
     "hero_department": "Energy Engineering",
-    "about_heading": "A common foundation<br>for connected research.",
-    "about_intro": "DEEP-MATH Lab is led by Hyunju Kim at KENTECH. We bring mathematical analysis, computational methods, and scientific machine learning into AI and energy research.",
+    "about_heading": "A shared curiosity.<br>A research community.",
+    "about_intro": "Led by Hyunju Kim, DEEP-MATH Lab brings people together around the mathematical foundations of AI and energy research.",
     "about_detail": "DEEP-MATH stands for Deep-learning Engineering and Explanatory Principles in Mathematics.",
     "all_research": "Explore all research themes",
     "all_people": "Meet the group",
@@ -79,24 +79,24 @@
     "problems_label": "PROBLEM CLASSES",
     "related_papers": "Related publications",
     "research_context": "The lab connects the mathematics of learning, learning methods for mathematical problems, and numerical modeling. Our selected publications document the foundations in differential equations and numerical analysis.",
-    "page_research_title": "Research foundations.",
-    "page_research_intro": "We develop the mathematics and computational methods that support research across AI, hydrogen, batteries, power grids, and nuclear research.",
-    "page_people_title": "The research group.",
-    "page_people_intro": "Meet the faculty and researchers working on the mathematical foundations of AI and energy research at KENTECH.",
+    "page_research_title": "Three directions.<br>Shared foundations.",
+    "page_research_intro": "We study the mathematics of learning, learning methods for mathematical problems, and the simulation of physical systems.",
+    "page_people_title": "People behind<br>the questions.",
+    "page_people_intro": "A group at KENTECH connecting mathematical analysis, scientific machine learning and computational research.",
     "page_publications_title": "Publications.",
-    "page_publications_intro": "Selected published papers spanning fractional differential equations, isogeometric analysis, and methods for singular problems.",
+    "page_publications_intro": "A curated collection of published work in numerical analysis, fractional differential equations and geometric approximation.",
     "bibtex_download": "Download bibliography (.bib)",
-    "page_join_title": "Join & collaborate.",
-    "page_join_intro": "Contact the group about research study, collaboration, or a visit involving the mathematical and computational foundations of AI and energy.",
+    "page_join_title": "Bring a question.<br>Build a connection.",
+    "page_join_intro": "Explore research study, a collaboration or a visit with DEEP-MATH Lab. Start with your interests and the question you want to work on.",
     "join_heading": "Research begins<br>with a conversation.",
     "join_home_intro": "Discuss a research question, collaboration or visit with the group.",
     "join_link": "Research enquiries & visits",
-    "join_prepare": "What to include in an enquiry",
+    "join_prepare": "A good first conversation.",
     "join_status": "Available supervision, visiting arrangements, and any open positions are confirmed directly with the group. Formal degree admissions are handled by KENTECH.",
     "join_email_cta": "Email the group",
     "university_info": "KENTECH information",
-    "page_contact_title": "Contact.",
-    "page_contact_intro": "We are based at the Korea Institute of Energy Technology in Naju, Republic of Korea.",
+    "page_contact_title": "Connect with<br>DEEP-MATH.",
+    "page_contact_intro": "Research enquiries, collaborations and visits. Our group is based at the Korea Institute of Energy Technology in Naju, Republic of Korea.",
     "campus_address": "Korea Institute of Energy Technology\n200 Hyeoksin-ro, Naju, Jeollanam-do 58330\nRepublic of Korea",
     "campus_label": "CAMPUS ADDRESS",
     "visit_note": "Please contact the group before arranging a visit. Building and room details can be confirmed by email.",
@@ -345,8 +345,8 @@
     "https://mlg.eng.cam.ac.uk/",
     "https://is.mpg.de/ps"
   ],
-  "site_version": "1.3.0",
-  "updated_on": "2026-10-08",
+  "site_version": "1.4.0",
+  "updated_on": "2026-10-09",
   "brand_full_name": "Deep-learning Engineering and Explanatory Principles in Mathematics",
   "site_description": "Mathematical foundations and a research hub for AI, hydrogen, batteries, power grids, and nuclear research at KENTECH, led by Hyunju Kim.",
   "application_areas": [
@@ -379,8 +379,16 @@
         "alt": "Two loss-versus-iteration plots comparing initialization settings for PINNs solving the Burgers equation.",
         "caption": "PINN training loss for the Burgers equation under different initialization settings.",
         "source": "Lab research introduction, 2025",
-        "ppt_media": "ppt/media/image61.png"
-      }
+        "ppt_media": "ppt/media/image61.png",
+        "reading_note": "The plots compare PINN training-loss trajectories for a Burgers-equation example under different initialization settings."
+      },
+      "concept": {
+        "src": "./research-concept-ai.svg",
+        "alt": "A schematic neural network showing signals passing through weighted layers, with initialization as a mathematical choice.",
+        "caption": "Signals, weights and initialization."
+      },
+      "question": "How do signals and gradients travel through a neural network?",
+      "home_description": "Study the mathematical structure of deep learning, from initialization to efficient models."
     },
     {
       "id": "ai-for-mathematics",
@@ -404,8 +412,16 @@
         "alt": "Approximate Helmholtz solution plotted on a curved geometry with x and y coordinates.",
         "caption": "Helmholtz approximation using isogeometric collocation combined with a neural network.",
         "source": "Lab research introduction, 2025",
-        "ppt_media": "ppt/media/image14.png"
-      }
+        "ppt_media": "ppt/media/image14.png",
+        "reading_note": "The surface shows a Helmholtz approximation on curved geometry, combining isogeometric collocation with a neural network."
+      },
+      "concept": {
+        "src": "./research-concept-pinn.svg",
+        "alt": "Coordinates enter a neural approximation that is constrained by PDE residuals and boundary conditions.",
+        "caption": "Learning with physical constraints."
+      },
+      "question": "How can learning methods respect equations and physical constraints?",
+      "home_description": "Combine neural approximation, differential equations and numerical analysis."
     },
     {
       "id": "simulation-modeling",
@@ -429,9 +445,17 @@
         "alt": "Phase-field pattern on a circular domain, shown with coordinate axes and a color scale.",
         "caption": "Phase-field modeling on a circular domain.",
         "source": "Lab research introduction, 2025",
-        "ppt_media": "ppt/media/image68.png"
+        "ppt_media": "ppt/media/image68.png",
+        "reading_note": "The spatial pattern is a phase-field example on a circular domain. The source does not specify a time or fractional order."
       },
-      "home_title": "Simulation & modeling"
+      "home_title": "Simulation & modeling",
+      "concept": {
+        "src": "./research-concept-modeling.svg",
+        "alt": "A conceptual sequence from curved geometry to discretization and a schematic field representation.",
+        "caption": "From geometry to a numerical model."
+      },
+      "question": "How can we represent geometry, memory and physical dynamics?",
+      "home_description": "Develop mathematical models and numerical methods for physical systems."
     }
   ]
 }
