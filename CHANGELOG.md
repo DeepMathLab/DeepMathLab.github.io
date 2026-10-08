@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0 — 2026-10-08
+
+- Refine the first screen around a large, two-line mathematical mission and one concise introduction.
+- Give the five research connections equal prominence in a responsive, static field rail.
+- Clarify the primary Research path and secondary Publications path; retain the image-free, light-only hero.
+- Simplify homepage research cards with direct title links and original figures, keeping detailed method keywords on the Research page.
+- Improve homepage heading scale, alignment and spacing using Figma guidance and Apple, Google DeepMind and IBM Research as visual and structural references.
+
 ## 1.2.0 — 2026-10-08
 
 - Adopt the DEEP-MATH Lab name and expansion from the professor's introduction.

@@ -25,14 +25,14 @@
     "contact": "Contact"
   },
   "copy": {
-    "hero_title": "Mathematical foundations.<br><span>For AI and energy.</span>",
+    "hero_title": "Mathematics.<br><span>For AI and energy.</span>",
     "hero_subtitle": "Mathematical analysis and computational methods",
-    "hero_intro": "We provide mathematical foundations and serve as a research hub for AI, hydrogen, batteries, power grids, and nuclear research.",
-    "hero_cta": "Our research",
-    "hero_secondary": "Selected work",
+    "hero_intro": "A mathematical foundation and research hub for AI and energy at KENTECH.",
+    "hero_cta": "Explore research",
+    "hero_secondary": "Publications",
     "hero_strip": "AI / Hydrogen / Batteries / Power grids / Nuclear research",
-    "research_heading": "Three connected<br>research directions.",
-    "research_intro": "Our work connects the mathematical analysis of deep learning with learning methods for differential equations and the simulation of physical systems.",
+    "research_heading": "Three perspectives.<br>One shared foundation.",
+    "research_intro": "Mathematical analysis, scientific machine learning and simulation connect our research.",
     "people_heading": "The research group.",
     "pi_label": "FACULTY / GROUP LEAD",
     "pi_name": "Hyunju Kim",
@@ -44,8 +44,8 @@
     "all_filter": "All",
     "undergraduate_filter": "Undergraduate",
     "members_note": "",
-    "publications_heading": "Selected<br>publications.",
-    "publications_intro": "Published work in numerical analysis, geometric approximation, and fractional differential equations.",
+    "publications_heading": "Ideas, in print.",
+    "publications_intro": "Selected publications in numerical analysis, geometric approximation and fractional differential equations.",
     "publications_source": "Official publication list",
     "search_placeholder": "Search titles, authors, or journals",
     "search_label": "Search publications",
@@ -89,7 +89,7 @@
     "page_join_title": "Join & collaborate.",
     "page_join_intro": "Contact the group about research study, collaboration, or a visit involving the mathematical and computational foundations of AI and energy.",
     "join_heading": "Research begins<br>with a conversation.",
-    "join_home_intro": "Discuss a mathematical or computational question in AI, hydrogen, batteries, power grids, or nuclear research with the group.",
+    "join_home_intro": "Discuss a research question, collaboration or visit with the group.",
     "join_link": "Research enquiries & visits",
     "join_prepare": "What to include in an enquiry",
     "join_status": "Available supervision, visiting arrangements, and any open positions are confirmed directly with the group. Formal degree admissions are handled by KENTECH.",
@@ -345,7 +345,7 @@
     "https://mlg.eng.cam.ac.uk/",
     "https://is.mpg.de/ps"
   ],
-  "site_version": "1.2.0",
+  "site_version": "1.3.0",
   "updated_on": "2026-10-08",
   "brand_full_name": "Deep-learning Engineering and Explanatory Principles in Mathematics",
   "site_description": "Mathematical foundations and a research hub for AI, hydrogen, batteries, power grids, and nuclear research at KENTECH, led by Hyunju Kim.",
@@ -430,7 +430,8 @@
         "caption": "Phase-field modeling on a circular domain.",
         "source": "Lab research introduction, 2025",
         "ppt_media": "ppt/media/image68.png"
-      }
+      },
+      "home_title": "Simulation & modeling"
     }
   ]
 }

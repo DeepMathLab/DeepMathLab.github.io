@@ -95,12 +95,12 @@ Reference-site wording, logos, template code and staff records are not copied. T
 
 ## Sharing
 
-`share-card.svg` is the editable artwork; `share-card.png` is its 1200×630 export. Pages use it for Open Graph and Twitter previews. Update `ASSET_VERSION` in `build.py` after presentation/share-art changes. Kakao may retain previous previews; `home.html` provides a separate sharing URL. Its `og:url` matches its address because [Kakao may scrape the `og:url` destination](https://devtalk.kakao.com/t/og-url/136380). Deployment alone does not verify a changed Kakao preview.
+`share-card.svg` is the editable artwork; `share-card.png` is its 1200×630 export. Pages use it for Open Graph and Twitter previews. Update `site_version` in `site.json` after presentation/share-art changes. Kakao may retain previous previews; `home.html` provides a separate sharing URL. Its `og:url` matches its address because [Kakao may scrape the `og:url` destination](https://devtalk.kakao.com/t/og-url/136380). Deployment alone does not verify a changed Kakao preview.
 
 
 ## Version control and indexing
 
-The current release is **1.2.0**. The `site_version` value also supplies the asset cache version. Keep editable sources and generated pages together in Git; [CHANGELOG.md](CHANGELOG.md) records user-visible releases. Run `python3 build.py` before publishing changes.
+The current release is **1.3.0**. The `site_version` value also supplies the asset cache version. Keep editable sources and generated pages together in Git; [CHANGELOG.md](CHANGELOG.md) records user-visible releases. Run `python3 build.py` before publishing changes.
 
 The build generates `sitemap.xml` with the six canonical content pages and `robots.txt` with its public location. `home.html` is a sharing alias and canonicalizes to the root; it and the 404 page are omitted from the sitemap. `updated_on` supplies the sitemap modification date and should change when content changes.
 
@@ -131,3 +131,9 @@ Three images come from the professor-supplied 2025 introduction:
 Each PNG is an unchanged copy of the embedded source image. WebP previews preserve image proportions, axes, legends and color scales. HTML captions name the example and its source. A full-size link opens the source PNG in a new tab. No performance comparison, model parameter or publication DOI is inferred from these images.
 
 Research overviews show Focus, Methods and Example. Dense numerical foundations use native disclosure rows, retaining their descriptions and related papers. Existing fragment links open the relevant row. The disclosures remain usable without JavaScript. Sources, full-size links, intrinsic image sizes, alt text and link focus states are checked separately from image appearance. Browser viewport checks do not certify real-device performance or full accessibility compliance.
+
+## First-screen refinement
+
+Version 1.3.0 uses typography as the main visual: a full-width, two-line mission, a concise introduction, a primary Research action and a quiet Publications link. Five static field labels describe the lab’s scope without implying project counts or achievements. No representative image, gradient, animation or tracking dependency was added. Homepage research cards retain original examples and remove repetitive method tags; the Research page keeps the methods.
+
+The refinement revisits Figma’s [visual hierarchy](https://www.figma.com/resource-library/what-is-visual-hierarchy/), [typography](https://www.figma.com/resource-library/typography-in-design/) and [grid layouts](https://www.figma.com/resource-library/web-design-grid-layout-examples/). [Apple](https://www.apple.com/), [Google DeepMind About](https://deepmind.google/about/) and [IBM Research](https://research.ibm.com/) inform the emphasis on one first-screen message and clear exploration paths. Their logos, media, wording, claims and site code are not reused.
