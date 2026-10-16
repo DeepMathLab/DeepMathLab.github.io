@@ -331,7 +331,8 @@
       "journal": "International Conference on Learning Representations (ICLR)",
       "detail": "Conference paper",
       "topic": "Numerical methods",
-      "category": "other"
+      "category": "other",
+      "bibtype": "inproceedings"
     },
     {
       "year": 2024,
@@ -486,7 +487,8 @@
       "journal": "The University of North Carolina at Charlotte",
       "detail": "Dissertation",
       "topic": "Isogeometric analysis",
-      "category": "geometry"
+      "category": "geometry",
+      "bibtype": "phdthesis"
     },
     {
       "year": 2013,

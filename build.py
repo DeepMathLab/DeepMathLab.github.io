@@ -36,11 +36,13 @@ def route(page, lang='en'):
 def bibtex(item):
     ident = item.get('doi') or ' '.join(re.sub(r'[^A-Za-z0-9 ]+', ' ', item['title']).split()[:6]) + ' ' + str(item['year'])
     key = 'deepmathlab-' + re.sub(r'[^A-Za-z0-9]+', '-', ident).strip('-')
+    bibtype = item.get('bibtype', 'article')
+    venue_field = {'article': 'journal', 'inproceedings': 'booktitle', 'phdthesis': 'school'}[bibtype]
     fields = {'title': item['title'], 'author': item['authors'].replace(', ', ' and '),
-              'journal': item['journal'], 'year': str(item['year'])}
+              venue_field: item['journal'], 'year': str(item['year'])}
     if item.get('doi'):
         fields['doi'] = item['doi']
-    return '@article{' + key + ',\n' + ',\n'.join('  ' + k + ' = {' + v + '}' for k, v in fields.items()) + '\n}'
+    return '@' + bibtype + '{' + key + ',\n' + ',\n'.join('  ' + k + ' = {' + v + '}' for k, v in fields.items()) + '\n}'
 
 
 def render(page='home', page_path=None):
