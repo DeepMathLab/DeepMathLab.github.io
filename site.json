@@ -246,6 +246,116 @@
   ],
   "publications": [
     {
+      "year": 2026,
+      "title": "Numerical analysis of magnetohydrodynamic free convection hybrid nanofluid flow within a porous cavity containing multiple-heated fins using finite difference scheme",
+      "authors": "Thirumalaisamy K., Yunchang Seol, Hyunju Kim",
+      "journal": "International Journal of Numerical Methods for Heat & Fluid Flow",
+      "detail": "Ahead of print · 1–43",
+      "doi": "10.1108/HFF-04-2026-0484",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Constrained weak identification of Allen–Cahn free energies with surface-tension calibration",
+      "authors": "S. Jung, Hyunju Kim",
+      "journal": "arXiv preprint",
+      "detail": "arXiv:2609.18403",
+      "doi": "10.48550/arXiv.2609.18403",
+      "topic": "Numerical methods",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Mechanics-trained neural coordinate mapping for B-spline analysis of crack-tip and corner singularities",
+      "authors": "Hyunju Kim",
+      "journal": "arXiv preprint",
+      "detail": "arXiv:2607.23229",
+      "doi": "10.48550/arXiv.2607.23229",
+      "topic": "Singular differential equations",
+      "category": "singular"
+    },
+    {
+      "year": 2026,
+      "title": "Fast and Scalable Caputo Fractional Gradient Descent via Perturbation-Preserving Memory Compression",
+      "authors": "Hwanseo Lee, Junseo Lee, Hyunju Kim",
+      "journal": "arXiv preprint",
+      "detail": "arXiv:2607.15505",
+      "doi": "10.48550/arXiv.2607.15505",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2025,
+      "title": "Buoyancy-driven heat transfer and entropy analysis of a hydromagnetic GO-Fe3O4/H2O hybrid nanofluid in an energy storage enclosure partially filled with non-Darcy porous medium under an oblique magnetic field",
+      "authors": "H. Thameem Basha, Hyunju Kim, Bongsoo Jang",
+      "journal": "International Journal of Numerical Methods for Heat & Fluid Flow",
+      "detail": "35 · 2 · 491–523",
+      "doi": "10.1108/HFF-03-2024-0193",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2025,
+      "title": "The time-fractional Allen–Cahn equation on geometric computational domains",
+      "authors": "Dongsun Lee, Hyunju Kim",
+      "journal": "Communications in Nonlinear Science and Numerical Simulation",
+      "detail": "141 · Article 108455",
+      "doi": "10.1016/j.cnsns.2024.108455",
+      "topic": "Geometric methods",
+      "category": "geometry"
+    },
+    {
+      "year": 2025,
+      "title": "Magnetohydrodynamic buoyancy-driven hybrid nanofluid flow and heat transfer within a partially heated porous square cavity",
+      "authors": "K. Thirumalaisamy, Young Duk Lee, Hyunju Kim",
+      "journal": "Physics of Fluids",
+      "detail": "37",
+      "doi": "10.1063/5.0264031",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2024,
+      "title": "Exploring bioconvection dynamics within an inclined porous annulus: Integration of CFD and AI on the synergistic effects of hybrid nanofluids, oxytactic microorganisms, and magnetic field",
+      "authors": "H. A. Kumara Swamy, Daesick Ryu, Hyunju Kim, M. Sankar, Younghae Do",
+      "journal": "International Communications in Heat and Mass Transfer",
+      "detail": "159 · Article 107999",
+      "doi": "10.1016/j.icheatmasstransfer.2024.107999",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2024,
+      "title": "Computational analysis of magnetohydrodynamic ternary-hybrid nanofluid flow and heat transfer inside a porous cavity with shape effects",
+      "authors": "Hyunju Kim, Younghae Do, S. Ramachandran, M. Sankar, K. Thirumalaisamy",
+      "journal": "Physics of Fluids",
+      "detail": "36 · 8",
+      "doi": "10.1063/5.0222802",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2024,
+      "title": "Mapping techniques for collocation method of time-fractional convection–diffusion equations in domains with cracks",
+      "authors": "Bongsoo Jang, Hyunju Kim",
+      "journal": "Mathematics and Computers in Simulation",
+      "detail": "217 · 60–79",
+      "doi": "10.1016/j.matcom.2023.10.014",
+      "topic": "Singular differential equations",
+      "category": "singular"
+    },
+    {
+      "year": 2024,
+      "title": "A Novel Numerical Method for Solving Nonlinear Fractional-Order Differential Equations and Its Applications",
+      "authors": "Seyeon Lee, Hyunju Kim, Bongsoo Jang",
+      "journal": "Fractal and Fractional",
+      "detail": "8 · 1 · Article 65",
+      "doi": "10.3390/fractalfract8010065",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
       "year": 2021,
       "title": "An efficient numerical approach for solving two-point fractional order nonlinear boundary value problems with Robin boundary conditions",
       "authors": "Hyunju Kim, Junseo Lee, Bongsoo Jang",
