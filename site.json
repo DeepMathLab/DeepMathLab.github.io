@@ -316,6 +316,24 @@
       "category": "other"
     },
     {
+      "year": 2025,
+      "title": "Computational analysis of magnetohydrodynamic buoyancy-driven flow and thermal transmission within a circular dome-shaped porous enclosure using finite difference scheme",
+      "authors": "Hyunju Kim, K. Thirumalaisamy, Venkatadri Kothuru",
+      "journal": "International Journal of Numerical Methods for Heat & Fluid Flow",
+      "detail": "Article",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2025,
+      "title": "Robust Weight Initialization for Tanh Neural Networks with Fixed Point Analysis",
+      "authors": "Hyunwoo Lee, Hayoung Choi, Hyunju Kim",
+      "journal": "International Conference on Learning Representations (ICLR)",
+      "detail": "Conference paper",
+      "topic": "Numerical methods",
+      "category": "other"
+    },
+    {
       "year": 2024,
       "title": "Exploring bioconvection dynamics within an inclined porous annulus: Integration of CFD and AI on the synergistic effects of hybrid nanofluids, oxytactic microorganisms, and magnetic field",
       "authors": "H. A. Kumara Swamy, Daesick Ryu, Hyunju Kim, M. Sankar, Younghae Do",
@@ -396,6 +414,34 @@
       "category": "fractional"
     },
     {
+      "year": 2020,
+      "title": "Efficient and fast predictor-corrector method for solving nonlinear fractional differential equations with non-singular kernel",
+      "authors": "Seyeon Lee, Junseo Lee, Hyunju Kim, Bongsoo Jang",
+      "journal": "arXiv preprint",
+      "detail": "arXiv:2010.02664",
+      "doi": "10.48550/arXiv.2010.02664",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2019,
+      "title": "Enhanced semi-analytic method for solving nonlinear differential equations of fractional order",
+      "authors": "Bongsoo Jang, Hyunju Kim",
+      "journal": "Journal of the Korean Society for Industrial and Applied Mathematics",
+      "detail": "23(4) · 283–300",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2019,
+      "title": "Patchwise mapping method for solving elliptic boundary value problems containing multiple singularities",
+      "authors": "Hyunju Kim",
+      "journal": "Journal of Applied Mathematics and Physics",
+      "detail": "7 · 1572–1598",
+      "topic": "Singular differential equations",
+      "category": "singular"
+    },
+    {
       "year": 2018,
       "title": "Implicitly enriched Galerkin methods for numerical solutions of fourth-order partial differential equations containing singularities",
       "authors": "Sinae Kim, Hae-Soo Oh, Birce Palta, Hyunju Kim",
@@ -406,12 +452,48 @@
       "category": "singular"
     },
     {
+      "year": 2016,
+      "title": "Partition of unity isogeometric analysis of two dimensional elliptic singular perturbation problems",
+      "authors": "Bongsoo Jang, Hyunju Kim, Hae-Soo Oh, Sinae Kim",
+      "journal": "Computational Mechanics",
+      "detail": "58(6) · 1019–1038",
+      "topic": "Isogeometric analysis",
+      "category": "geometry"
+    },
+    {
+      "year": 2014,
+      "title": "Enriched isogeometric analysis of elliptic boundary value problems in domains with cracks and/or corners",
+      "authors": "Hae-Soo Oh, Hyunju Kim, Jae Woo Jeong",
+      "journal": "International Journal for Numerical Methods in Engineering",
+      "detail": "97(3) · 149–180",
+      "topic": "Isogeometric analysis",
+      "category": "geometry"
+    },
+    {
       "year": 2013,
       "title": "Mapping techniques for isogeometric analysis of elliptic boundary value problems containing singularities",
       "authors": "Jae Woo Jeong, Hae-Soo Oh, Sunbu Kang, Hyunju Kim",
       "journal": "Computer Methods in Applied Mechanics and Engineering",
       "detail": "254 · 334–352",
       "doi": "10.1016/j.cma.2012.09.009",
+      "topic": "Isogeometric analysis",
+      "category": "geometry"
+    },
+    {
+      "year": 2013,
+      "title": "Isogeometric analysis and patchwise reproducing polynomial particle method for plates",
+      "authors": "Hyunju Kim",
+      "journal": "The University of North Carolina at Charlotte",
+      "detail": "Dissertation",
+      "topic": "Isogeometric analysis",
+      "category": "geometry"
+    },
+    {
+      "year": 2013,
+      "title": "Patchwise Reproducing Polynomial Particle Method for Thick Plates: bending, free vibration, and buckling",
+      "authors": "Hyunju Kim, Bongsoo Jang",
+      "journal": "Journal of the Korean Society for Industrial and Applied Mathematics",
+      "detail": "17(2) · 67–85",
       "topic": "Isogeometric analysis",
       "category": "geometry"
     }

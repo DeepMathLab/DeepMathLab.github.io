@@ -34,9 +34,12 @@ def route(page, lang='en'):
 
 
 def bibtex(item):
-    key = 'deepmathlab-' + re.sub(r'[^A-Za-z0-9]+', '-', item['doi'])
+    ident = item.get('doi') or ' '.join(re.sub(r'[^A-Za-z0-9 ]+', ' ', item['title']).split()[:6]) + ' ' + str(item['year'])
+    key = 'deepmathlab-' + re.sub(r'[^A-Za-z0-9]+', '-', ident).strip('-')
     fields = {'title': item['title'], 'author': item['authors'].replace(', ', ' and '),
-              'journal': item['journal'], 'year': str(item['year']), 'doi': item['doi']}
+              'journal': item['journal'], 'year': str(item['year'])}
+    if item.get('doi'):
+        fields['doi'] = item['doi']
     return '@article{' + key + ',\n' + ',\n'.join('  ' + k + ' = {' + v + '}' for k, v in fields.items()) + '\n}'
 
 
@@ -99,13 +102,19 @@ def render(page='home', page_path=None):
         result = []
         heading = 'h' + str(heading_level)
         for item in items:
+            if item.get('doi'):
+                title_html = f'<a href="https://doi.org/{esc(item["doi"])}" target="_blank" rel="noopener noreferrer">{esc(item["title"])}<span class="pub-arrow" aria-hidden="true">↗</span></a>'
+                doi_html = f'<a class="pub-doi" href="https://doi.org/{esc(item["doi"])}" target="_blank" rel="noopener noreferrer">DOI: {esc(item["doi"])}<span aria-hidden="true">↗</span></a>'
+            else:
+                title_html = esc(item['title'])
+                doi_html = ''
             cite = f'<details class="bibtex-entry"><summary>BibTeX</summary><div class="citation-tools"><button class="copy-citation" type="button" data-label-copy="{c("copy_citation")}" data-label-copied="{c("copied_citation")}" data-label-failed="{c("copy_failed")}" hidden>{c("copy_citation")}</button><span class="copy-status" role="status" aria-live="polite"></span></div><pre tabindex="0"><code>{esc(bibtex(item))}</code></pre></details>' if citations else ''
-            search = esc(' '.join([item['title'], item['authors'], item['journal'], item['doi']]).lower())
+            search = esc(' '.join([item['title'], item['authors'], item['journal'], item.get('doi', '')]).lower())
             result.append(f'''<article class="publication" data-year="{item['year']}" data-topic="{esc(item.get('category', 'other'))}" data-search="{search}">
               <span class="pub-year">{item['year']}</span><div class="pub-body"><span class="pub-type">{t(item['topic'])}</span>
-              <{heading}><a href="https://doi.org/{esc(item['doi'])}" target="_blank" rel="noopener noreferrer">{esc(item['title'])}<span class="pub-arrow" aria-hidden="true">↗</span></a></{heading}>
+              <{heading}>{title_html}</{heading}>
               <p class="pub-authors">{esc(item['authors'])}</p><p class="pub-journal"><span>{esc(item['journal'])}</span> · {esc(item['detail'])}</p>
-              <a class="pub-doi" href="https://doi.org/{esc(item['doi'])}" target="_blank" rel="noopener noreferrer">DOI: {esc(item['doi'])}<span aria-hidden="true">↗</span></a>{cite}</div></article>''')
+              {doi_html}{cite}</div></article>''')
         return ''.join(result)
 
     def profiles(items):
@@ -157,7 +166,7 @@ def render(page='home', page_path=None):
     elif page == 'research':
         foundations = []
         for item in DATA['research']:
-            related = [pub for pub in DATA['publications'] if pub['doi'] in item['related_dois']]
+            related = [pub for pub in DATA['publications'] if pub.get('doi') in item['related_dois']]
             foundations.append(f'''<details class="research-foundation" id="{esc(item['id'])}"><summary><h3>{t(item['title'])}<span class="foundation-toggle" aria-hidden="true"></span></h3></summary><div class="foundation-content"><p>{t(item['description'])}</p><dl class="research-meta"><div><dt>{c('methods_label')}</dt><dd>{' / '.join(esc(x) for x in item['tags'])}</dd></div><div><dt>{c('problems_label')}</dt><dd>{t(item['scope'])}</dd></div></dl>{media(item['id'], t(item['title']) + ' / ' + c('research_visual'))}<h4>{c('related_papers')}</h4>{papers(related, heading_level=5)}</div></details>''')
         blocks = []
         for item in DATA['research_axes']:
