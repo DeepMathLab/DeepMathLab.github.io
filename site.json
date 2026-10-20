@@ -498,6 +498,69 @@
       "detail": "17(2) · 67–85",
       "topic": "Isogeometric analysis",
       "category": "geometry"
+    },
+    {
+      "year": 2026,
+      "title": "A nonstandard fractional Jacobi pseudospectral method for weakly regular right-sided Caputo terminal problems",
+      "authors": "I. G. Ameen, M. Hammad, M. Razzaghi, M. A. Zaky",
+      "journal": "arXiv preprint",
+      "detail": "arXiv:2610.20829",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2026,
+      "title": "Numerical Investigation of MHD-Driven Heat and Mass Transfer in a Porous Enclosure Filled With Cu–Water Nanofluid",
+      "authors": "S. I. Tanni, M. S. Ahmed, R. U. S. Zaman, F. K. Ava, I. S. Chuhan",
+      "journal": "Engineering Reports",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Normalized Nabla Fractional Difference Operators with Discrete Exponential and Mittag-Leffler Kernels",
+      "authors": "C. Laouar, T. Abdeljawad, M. A. Alqudah",
+      "journal": "Fractals",
+      "detail": "",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2026,
+      "title": "Computational analysis of shear dependent heat and mass transfer in MHD hybrid nanofluid within a porous medium",
+      "authors": "M. F. Endalew, X. J. Zhang",
+      "journal": "Discover Nano",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Thermogravitational convection in hybrid ferrofluids under magnetic field-dependent viscosity in a split-baffle enclosure",
+      "authors": "A. Chattopadhyay, S. Soren, S. Hansda, S. Roy",
+      "journal": "… Journal of Numerical Methods for Heat …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "MHD Carreau nanofluid flow with gyrotactic microorganisms, incorporating first- and second-order velocity slip",
+      "authors": "A. Dabas, A. Parmar, A. J. Chamkha, Q. Al-Mdallal",
+      "journal": "International Journal of …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Stability and Error Estimates with Optimal ε-Dependence for Strang Splitting of the Allen–Cahn Equation",
+      "authors": "R. Luo, C. Quan, Z. Tan, Y. Wu",
+      "journal": "arXiv preprint",
+      "detail": "arXiv:2610.14867",
+      "topic": "Numerical methods",
+      "category": "other"
     }
   ],
   "research_url": "https://kentech.ac.kr/submenu.do?menuurl=JPQbgLY0JlNRZPvKXFeixQ%3D%3D&siteName=hjkim",
