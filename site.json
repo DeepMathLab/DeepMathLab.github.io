@@ -561,6 +561,105 @@
       "detail": "arXiv:2610.14867",
       "topic": "Numerical methods",
       "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Effects of Heat Source/Sink and Fractional Time-Derivatives on Transient Natural Convection Flow in a Vertical Channel Under Dynamic and Static Slip Conditions",
+      "authors": "BK Jha, IO Oyelade",
+      "journal": "Heat Transfer",
+      "detail": "",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2026,
+      "title": "A Novel PINN–ANFIS Framework for Fractional MHD Flow of Casson HCNTs for High Performance Thermal Systems",
+      "authors": "S Eswaramoorthi, S Nasir, G Sangeetha, P Duraisamy…",
+      "journal": "International Journal of …",
+      "detail": "",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2026,
+      "title": "Stability and heat transfer of mhd eyring powell tri hybrid nanofluid flow over a permeable shrinking cylinder",
+      "authors": "AR Mohd Kasim, PES Mustafa, A Aljabali, NA Zainal…",
+      "journal": "Discover Nano",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Machine learning analysis for the thermophoretic particle deposition in casson nanofluid with porous medium and heat generation",
+      "authors": "A Abbas, B Dammak, YE Touati, J Djuansjah, D Awaiz…",
+      "journal": "Discover Nano",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Numerical analysis of melting heat transfer in stratified Casson nanofluid flow over an inclined wedge for energy-efficient thermal systems",
+      "authors": "NH Al-Harbi, A Khan, A Riasat, K Javid, Hashim…",
+      "journal": "International Journal of …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Effects of Marangoni Convection, Variable Viscosity, Thermal Conductivity, and Joule Heating on MHD Free Convection Tri-Hybrid Nanofluid and Nanofluid Flow over …",
+      "authors": "A Rehman, AA Saad, AZA Mazlan, H Ab Samat, R Jan…",
+      "journal": "Journal of Porous Media",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "A fractional physics-informed neural network for memory-dependent frost growth with coupled heat and mass transfer",
+      "authors": "M Khan, MS Anwar, X Gan, SE Alhazmi",
+      "journal": "… Communications in Heat and Mass Transfer",
+      "detail": "",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2026,
+      "title": "Synergistic effects of surface tension and LTNE on thermocapillary-gravitational micropolar convection and thermal energy conversion in a nano-encapsulated PCM …",
+      "authors": "CR Mirza, T Tayebi, HM Zayani, NA Shah, GA Alsawah…",
+      "journal": "… Communications in Heat …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Analytical solution and Boundary Value Analysis of Magneto-Thermosolutal Casson Transport with Darcy-Forchheimer Drag and Cross-Diffusion over an inclined …",
+      "authors": "SM Hussain, B Ali, S Jubair, A Bibi, F Jubair, A Flah…",
+      "journal": "Materials Today …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Inherent Failure Modes of Physics-Informed Neural Networks for Buoyancy-Driven Flow: Role of Non-Dimensionalization in Network Training",
+      "authors": "K Chand, A Peyvan, H Luo",
+      "journal": "arXiv preprint",
+      "detail": "arXiv:2610.38889",
+      "topic": "Numerical methods",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Numerical investigation of magnetohydrodynamic Williamson nanofluid flow through non-Darcy porous media with variable …",
+      "authors": "M Roy, P Mishra, BS Goud, MY Mustafa",
+      "journal": "Results in Surfaces and Interfaces",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
     }
   ],
   "research_url": "https://kentech.ac.kr/submenu.do?menuurl=JPQbgLY0JlNRZPvKXFeixQ%3D%3D&siteName=hjkim",
