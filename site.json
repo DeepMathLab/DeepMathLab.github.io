@@ -660,6 +660,96 @@
       "detail": "",
       "topic": "Computational fluid dynamics",
       "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Fourier Neural Operator for Thermo-Magnetic MHD Casson Flow in a Wavy Porous Cavity with Inverted Cold Obstacle",
+      "authors": "S Aslam, S Zainab, K Batool, SM Hussain…",
+      "journal": "Results in Engineering",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Unsteady MHD Boundary Layer Flow and Heat Transfer of Penta Hybrid Nanofluid Due to a Permeable Stretching/Shrinking Sheet and Velocity Slip",
+      "authors": "AZ Azman, NS Wahid, N Roșca, A Roșca, NM Arifin…",
+      "journal": "ZAMM‐Journal of Applied …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Magneto-convection in rotating Casson nanofluid layer embedded by Darcy–Brinkman porous medium",
+      "authors": "M Devi, B Naheliya",
+      "journal": "Special Topics & Reviews in Porous Media: An …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Comparative analysis of Newtonian and Maxwell nanofluid flow over a stretching cylinder via Galerkin finite element method",
+      "authors": "Z Iftikhar, K Muhammad, M Sarfraz, W Abdelfattah",
+      "journal": "International Journal of Modern …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2027,
+      "title": "Numerical study of MHD Casson model with SWCNT: MWCNT hybrid nanofluid flow over a stretching/shrinking sheet considering variable viscosity",
+      "authors": "M Hussain, Z Hanif, NS Akbar, S Hameed, LA Eressa",
+      "journal": "Next Materials",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "A numerical approach of reactive MHD Casson ternary hybrid nanofluid flow over an extended surface with activation energy",
+      "authors": "L Ali, S Khattak, KM Abualnaja, WG Alharbi…",
+      "journal": "Discover Nano",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "AI-driven entropy analysis of Sutterby tetra-hybrid nanofluid energy conversion for electromagnetic peristaltic flow",
+      "authors": "N Fatima, N Ijaz, A Zeeshan, A Albadri, YE Touati…",
+      "journal": "Discover Nano",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Darcy porous convection with a Jeffreys heat model",
+      "authors": "F Capone, B Straughan",
+      "journal": "Journal of Fluid Mechanics",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Geometry-memory interaction in time-fractional convection within Julia-set cavities",
+      "authors": "M Mohammad, A Trounev",
+      "journal": "Chaos, Solitons & Fractals",
+      "detail": "",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2026,
+      "title": "Thermo-hydrodynamic behavior of hybrid nanofluids in a wavy-cooled Gamma-shaped porous cavity under magnetic field",
+      "authors": "HF Öztop",
+      "journal": "International Journal of Numerical Methods for Heat & …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
     }
   ],
   "research_url": "https://kentech.ac.kr/submenu.do?menuurl=JPQbgLY0JlNRZPvKXFeixQ%3D%3D&siteName=hjkim",
