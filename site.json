@@ -750,6 +750,96 @@
       "detail": "",
       "topic": "Computational fluid dynamics",
       "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Numerical investigation of buoyancy-driven nanofluid flow within an obstacle-embedded dome-shaped enclosure",
+      "authors": "V Nithiya, V Prabhakar",
+      "journal": "Journal of the Brazilian Society of Mechanical Sciences",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "MHD natural convection of a hybrid nanofluid within a cavity containing porous elliptical heat sources",
+      "authors": "M Boucetta, Z Boulahia, A Hader, I Tarras, A Abdenour…",
+      "journal": "Journal of the Brazilian …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Galerkin finite element analysis of double-diffusive magnetohydrodynamic convection in a wavy-walled enclosure containing a hybrid nanofluid",
+      "authors": "R Ali, A Ali, Z Badshah, EAA Ismail, FA Awwad",
+      "journal": "Discover Nano",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Nonlinear boundary-value analysis and parametric sensitivity of magnetized casson nanofluid flow over a wedge with zero mass flux",
+      "authors": "M Ramzan, Z Hamid, M Bilal, T Sajid, KW Sin…",
+      "journal": "Discover Nano",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Prabhakar Fractional Modeling and ANN Prediction of Heat and Mass Transfer in Jeffrey Trihybrid Nanofluid Flow",
+      "authors": "M Amir, M Ramzan, I Hassan, M Shahryar, M Bayram",
+      "journal": "Thermal Advances",
+      "detail": "",
+      "topic": "Fractional equations",
+      "category": "fractional"
+    },
+    {
+      "year": 2026,
+      "title": "A Novel Lattice Boltzmann Method-Based Finite Difference Scheme for the Convection-Diffusion Equation with a Source Term: Derivation, Stability Analysis, and …",
+      "authors": "C Huang, Z Chai, B Shi",
+      "journal": "Advances in Applied Mathematics and Mechanics",
+      "detail": "",
+      "topic": "Numerical methods",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Numerical entropy analysis of MHD electro-osmotic flow of peristaltic movement in a nanofluid with a Darcy–Forchheimer porous medium",
+      "authors": "V Mutyala, KV Reddy",
+      "journal": "Chemical Product and Process Modeling",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Unsteady double-diffusive MHD nanofluid transport over a deformable permeable sheet in a Darcy porous medium: numerical and sensitivity analysis",
+      "authors": "N Ullah, HA Abid, N Ali, IO Shanazarovich…",
+      "journal": "Aerospace Science and …",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Bioconvection flow of Williamson nanofluid due to gyrotactic microorganisms on curved surface with Cattaneo Christov heat and mass fluxes",
+      "authors": "NS Khan, M Mansoor, ASA Omer, S Manzoor…",
+      "journal": "Discover Nano",
+      "detail": "",
+      "topic": "Computational fluid dynamics",
+      "category": "other"
+    },
+    {
+      "year": 2026,
+      "title": "Physics-Informed Neural Network with ADAM–LBFGS Optimizer for Modeling of TDF Bioconvection Nanofluid with Gyrotactic Microorganisms in Microfluidics Systems",
+      "authors": "H Azari, S Behrouzifar, M Mahboobtosi, DD Ganji",
+      "journal": "Results in Surfaces and Interfaces",
+      "detail": "",
+      "topic": "Numerical methods",
+      "category": "other"
     }
   ],
   "research_url": "https://kentech.ac.kr/submenu.do?menuurl=JPQbgLY0JlNRZPvKXFeixQ%3D%3D&siteName=hjkim",
